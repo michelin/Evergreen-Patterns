@@ -2,7 +2,7 @@
 title: "Capacity Planning"
 date: 2022-04-14T08:48:43+02:00
 draft: true
-sections:
+families:
   - running
 tags:
   - sre
