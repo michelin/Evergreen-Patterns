@@ -7,7 +7,7 @@ families:
 tags:
 - building
 description: ""
-featured_image: "/images/icons/production_aware_testing.png"
+featured_image: "/images/icons/reporting_system_health_state.png"
 ---
 
 # MAIN PURPOSE
