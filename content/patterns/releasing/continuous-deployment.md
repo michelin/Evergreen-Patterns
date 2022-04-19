@@ -2,6 +2,11 @@
 title: "Continuous Deployment"
 date: 2022-04-14T16:48:39+02:00
 draft: false
+sections:
+- releasing
+tags:
+- sre
+- itil
 ---
 
 # Main Purpose
@@ -14,6 +19,9 @@ Automating deployments is key to ensure fast and reproducible results. Deploymen
 
 Continuous Deployment is the ultimate step following Continuous Integration and Continuous Delivery.  
 Continuous Deployment is going beyond Continuous Delivery: all changes that are going through the pipeline (integration, automated tests, …) are deployed without human intervention.
+
+![Continuous deployment](../../../images/releasing/continuous_deployment.png)
+
 
 Depending on the context, this can be seen as a polar star or as a goal to reach. For example, for some critical applications, some manual testing and validation may still be required before really deploying to production.  
 The key point is to automate as much as possible: code validation, integration, tests, deployment to test environments, …. This will reduce the time between coding and feedback, which will improve software quality.  
