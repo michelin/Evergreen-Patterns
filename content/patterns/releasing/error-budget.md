@@ -3,9 +3,12 @@ title: "Error Budget"
 date: 2022-04-14T16:27:56+02:00
 draft: false
 families:
-  - releasing
+  - releasing 
+tags:
+  - building 
+description: ""
 images:
-  - images/error-budget.jpg
+    - images/error-budget.jpg
 ---
 
 ![Error Budget](/images/error-budget.jpg)
