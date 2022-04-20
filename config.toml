@@ -2,8 +2,3 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'Evergreen Patterns'
 theme="evergreen"
-
-[taxonomies]
-  category = 'categories'
-  families = 'families'
-  tag = 'tags'

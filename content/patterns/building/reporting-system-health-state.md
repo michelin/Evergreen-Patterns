@@ -2,7 +2,7 @@
 title: "Reporting System Health State"
 date: 2022-04-12T15:54:49+02:00
 draft: false
-families:
+categories:
 - building
 tags:
 - building

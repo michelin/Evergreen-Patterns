@@ -2,10 +2,10 @@
 title: "Error Budget"
 date: 2022-04-14T16:27:56+02:00
 draft: false
-families:
+categories:
   - releasing 
 tags:
-  - Releasig 
+  - Releasing 
 description: ""
 images:
     - images/error-budget.jpg

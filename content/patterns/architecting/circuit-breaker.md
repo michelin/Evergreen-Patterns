@@ -2,7 +2,7 @@
 title: "Circuit Breaker"
 date: 2022-04-12T12:27:55+02:00
 draft: false
-families: 
+categories: 
  - architecting
 tags: 
  - architecting 
@@ -13,16 +13,17 @@ featured_image: "/images/icons/circuit-breaker.png"
 The Circuit Breaker is a very popular resilience pattern to interconnect systems synchronously.
 It protects the caller from failures of the invoked service.
 
-Useful reading: Martin Fowler' article
+Useful reading: [https://www.martinfowler.com/bliki/CircuitBreaker.html](Martin Fowler article)
 
 # How it works ?
 A Circuit breaker has three states:
+- Closed (initial default state)
+- Opened
+- Half-opened
 
+Initially it will be closed. Whenever errors are encountered, it will switch the the "Opened" state. After some time, it will go back to the "Half-Opened" state automatically. In the "Half-Opened" state, the operation will be tried, and if it fails the circuit will automatically switch back to the "Opened" state, if it is successfull it will switch to "Closed".
 
-Closed (initial default state)
-Opened
-Half-opened
-Fallback
+## Fallback
 When the Circuit is opened, it is recommended to implement a fallback that will be used instead of the original service.
 
 The fallback should be built in relation with the Business: they should be involved in the decision of what the application should do in this scenario.
