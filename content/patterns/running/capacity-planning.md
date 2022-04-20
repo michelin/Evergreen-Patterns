@@ -1,13 +1,13 @@
 ---
 title: "Capacity Planning"
 date: 2022-04-14T08:48:43+02:00
-draft: true
+draft: false
 categories:
-  - running
+- running
 tags:
-  - sre
-  - itil
-  - capacity
+- running
+description: ""
+featured_image: "/images/icons/capacity_planning.png"
 ---
 
 # Definition
