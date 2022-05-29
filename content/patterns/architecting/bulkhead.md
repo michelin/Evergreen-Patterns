@@ -31,7 +31,7 @@ Critical services must be clustered.
 ## MICRO SERVICES
 These services are isolated by design. They are restartable and scalable independently.
 
-## CONTAINERS
+## Containers
 Containers offer a good balance of resource isolation with fairly low overhead. This is a complete isolation of the runtime.
 
 ## ASYNCHRONOUS MESSAGES
