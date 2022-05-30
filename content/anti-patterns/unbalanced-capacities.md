@@ -6,3 +6,10 @@ description: "The resources consumed by my system are maladjusted to the tasks t
 featured_image: "/images/anti-patterns/unbalanced-capacities.jpg"
 ---
 
+# Description
+
+# Some typical examples
+
+# What can be done
+
+# Key patterns that can mitigate this problem
