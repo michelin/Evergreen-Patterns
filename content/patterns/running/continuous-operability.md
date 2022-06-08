@@ -2,7 +2,7 @@
 title: "Continuous Operability"
 date: 2022-04-12T16:12:21+02:00
 draft: false
-families:
+categories:
 - running
 tags:
 - running
