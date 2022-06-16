@@ -134,5 +134,5 @@ for subdir, dirs, files in os.walk(path):
             #final_dict[origin[2]] = [final_dict[origin[2]],dict_categorie]
 
 pprint.pprint(final_dict)
-with open("data.json", "w", encoding="utf8") as output_file:
+with open("python_script/data.json", "w", encoding="utf8") as output_file:
     json.dump(final_dict, output_file) 
