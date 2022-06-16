@@ -42,4 +42,4 @@ jobs:
         pytest
     - name: Run export python script
       run: |
-        python python_script/infosPatternToJson.py
+        python infosPatternToJson.py
