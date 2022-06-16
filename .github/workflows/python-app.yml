@@ -35,9 +35,3 @@ jobs:
     - name: Run export python script
       run: |
         python python_script/infosPatternToJson.py
-        
-    - name: Archive code coverage results
-      uses: actions/upload-artifact@v3
-      with:
-        name: code-coverage-report
-        path: ./python_script/data2.json    
