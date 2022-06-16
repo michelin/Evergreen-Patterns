@@ -9,6 +9,7 @@ featured_image: "/images/icons/integration-points.png"
 # Description
 
 Connection between systems always bring operability challenges.  
+toto
 
 # Some typical examples
 
