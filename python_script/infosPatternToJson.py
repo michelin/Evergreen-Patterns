@@ -17,6 +17,7 @@ import frontmatter
 #GET NUMBER OF MD FILE FOR EACH CATEGORIE
 ############################################################
 dict_numbers_of_categories = {}
+path='..\content'
 
 for subdir, dirs, files in os.walk(path):
     for file in files:
@@ -42,9 +43,6 @@ print(dict_numbers_of_categories)
 
 
 
-
-
-path='..\content'
 logging.basicConfig(filename='myapp.log', level=logging.DEBUG, 
                     format='%(asctime)s %(levelname)s %(name)s %(message)s')
 logger=logging.getLogger(__name__)
