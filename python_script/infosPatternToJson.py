@@ -86,9 +86,6 @@ for subdir, dirs, files in os.walk(path):
                     else:
                         #print(md['featured_image'])
                         dict_data['featured_image'] = md['featured_image']
-
-                    #print(dict_data)  
-                    #list_of_data.append(dict_data)
                     
                     #keep categorie
                     if 'categories' not in md or md['categories'] == None or len(md['categories']) == 0:
@@ -116,11 +113,6 @@ for subdir, dirs, files in os.walk(path):
                                     dict_categorie[md['categories'][i]] += "," + str(dict_data)
                     
                     
-                    #print("dict_data => ")
-                    #print(dict_data)
-                    #pprint.pprint(dict_categorie)
-                    #print(dict_categorie)
-                    #print("\n")
                 except Exception as e:
                     print(e)
                     logger.error(e)
@@ -131,8 +123,7 @@ for subdir, dirs, files in os.walk(path):
             final_dict[origin[2]] = dict_categorie
         else:
             final_dict[origin[2]].update(dict_categorie)
-            #final_dict[origin[2]] = [final_dict[origin[2]],dict_categorie]
 
 pprint.pprint(final_dict)
-with open("./python_script/data.json", "w", encoding="utf8") as output_file:
+with open("data.json", "w", encoding="utf8") as output_file:
     json.dump(final_dict, output_file) 
