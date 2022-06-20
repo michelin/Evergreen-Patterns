@@ -18,7 +18,7 @@ import frontmatter
 ############################################################
 print("**LANCEMENT DU PROGRAMME**")
 dict_numbers_of_categories = {}
-path='..\content'
+path='./content'
 
 for subdir, dirs, files in os.walk(path):
     print("ok")
