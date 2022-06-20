@@ -19,6 +19,7 @@ import frontmatter
 print("**LANCEMENT DU PROGRAMME**")
 dict_numbers_of_categories = {}
 path='..\..\content'
+print(path)
 
 for subdir, dirs, files in os.walk(path):
     for file in files:
