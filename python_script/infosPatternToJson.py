@@ -18,9 +18,11 @@ import frontmatter
 ############################################################
 print("**LANCEMENT DU PROGRAMME**")
 dict_numbers_of_categories = {}
-path='./content/'
+path='..\content'
 
 for subdir, dirs, files in os.walk(path):
+    print("ok")
+    os.system('pwd')
     for file in files:
         print("titi")
         if "anti-patterns" in subdir or "patterns" in subdir:
