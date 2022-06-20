@@ -17,7 +17,7 @@ import frontmatter
 #GET NUMBER OF MD FILE FOR EACH CATEGORIE
 ############################################################
 dict_numbers_of_categories = {}
-path='./content'
+path='..\..\content'
 
 for subdir, dirs, files in os.walk(path):
     for file in files:
