@@ -49,5 +49,11 @@ jobs:
       run: git commit -m "Updating JSON file"
     - name: Fetch from master
       run: git fetch origin main
-    - name: Push code to master
-      run: git push origin main
+    #- name: Push code to master
+     # run: git push origin main
+      
+    - name: Push changes
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: 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
+        branch: main 
