@@ -47,7 +47,7 @@ jobs:
       run: git add .
     - name: Commit changed files
       run: git commit -m "Updating JSON file"
-    - name: Fetch from master
-      run: git fetch origin main
+    #- name: Fetch from master
+      #run: git fetch origin main
     - name: Push code to master
       run: git push origin main
