@@ -39,3 +39,11 @@ jobs:
       run: git remote set-url origin git@github.com:michelin/Evergreen-Patterns.git
     - name: check for changes
       run: git status
+    - name: stage changed files
+      run: git add .
+    - name: commit changed files
+      run: git commit -m "Updating JSON file"
+    - name: fetch from master
+      run: git fetch origin main
+    - name: push code to master
+      run: git push origin main
