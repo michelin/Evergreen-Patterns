@@ -35,3 +35,7 @@ jobs:
     - name: Run export python script
       run: |
         python python_script/infosPatternToJson.py
+    - name: switching from HTTPS to SSH
+      run: git remote set-url origin git@github.com:michelin/Evergreen-Patterns.git
+    - name: check for changes
+      run: git status
