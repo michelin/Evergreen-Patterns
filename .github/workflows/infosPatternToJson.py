@@ -22,9 +22,11 @@ path='..\..\content'
 
 for subdir, dirs, files in os.walk(path):
     for file in files:
+        print("passe")
         if "anti-patterns" in subdir or "patterns" in subdir:
             if re.findall(".md$", file):
                 
+                print("First loop")
                 #print(os.path.join(subdir, file))
                 md = frontmatter.load(os.path.join(subdir, file))
                 
