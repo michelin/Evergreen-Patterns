@@ -22,6 +22,8 @@ path='..\..\content'
 print(path)
 
 for subdir, dirs, files in os.walk(path):
+    print("ok")
+    os.system('pwd')
     for file in files:
         print("passe")
         if "anti-patterns" in subdir or "patterns" in subdir:
