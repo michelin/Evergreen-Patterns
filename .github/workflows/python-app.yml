@@ -35,15 +35,19 @@ jobs:
     - name: Run export python script
       run: |
         python python_script/infosPatternToJson.py
+    - name: Git authentification
+      run: |
+        git config --global user.name "ntenieres-bib"
+        git config --global user.email "nathan.tenieres@michelin.com"
     - name: switching from HTTPS to SSH
       run: git remote set-url origin git@github.com:michelin/Evergreen-Patterns.git
-    - name: check for changes
+    - name: Check for changes
       run: git status
-    - name: stage changed files
+    - name: Stage changed files
       run: git add .
-    - name: commit changed files
+    - name: Commit changed files
       run: git commit -m "Updating JSON file"
-    - name: fetch from master
+    - name: Fetch from master
       run: git fetch origin main
-    - name: push code to master
+    - name: Push code to master
       run: git push origin main
