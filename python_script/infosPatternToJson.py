@@ -21,9 +21,11 @@ path='../content'
 
 for subdir, dirs, files in os.walk(path):
     for file in files:
+        print("titi")
         if "anti-patterns" in subdir or "patterns" in subdir:
             if re.findall(".md$", file):
                 
+                print("tete")
                 #print(os.path.join(subdir, file))
                 md = frontmatter.load(os.path.join(subdir, file))
                 
@@ -53,9 +55,11 @@ for subdir, dirs, files in os.walk(path):
     dict_temp = {}
     dict_categorie = {}
     for file in files:
+        print("tata")
         if "anti-patterns" in subdir or "patterns" in subdir:
             if re.findall(".md$", file):
                 
+                print("toto")
                 print(os.path.join(subdir, file))
                 origin = subdir.split("\\")
                 #print(origin[2])
