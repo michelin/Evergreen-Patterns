@@ -17,14 +17,14 @@ import frontmatter
 #GET NUMBER OF MD FILE FOR EACH CATEGORIE
 ############################################################
 dict_numbers_of_categories = {}
-path='../content'
+path='./content'
 
 for subdir, dirs, files in os.walk(path):
     for file in files:
         if "anti-patterns" in subdir or "patterns" in subdir:
             if re.findall(".md$", file):
                 
-                #print(os.path.join(subdir, file))
+                print(os.path.join(subdir, file))
                 md = frontmatter.load(os.path.join(subdir, file))
                 
                 if 'categories' not in md or md['categories'] == None or len(md['categories']) == 0:
