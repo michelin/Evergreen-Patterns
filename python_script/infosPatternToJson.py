@@ -65,6 +65,7 @@ for subdir, dirs, files in os.walk(path):
                 print("toto")
                 print(os.path.join(subdir, file))
                 origin = subdir.split("\\")
+                print(origin)
                 #print(origin[2])
                 dict_data = {}
                 
