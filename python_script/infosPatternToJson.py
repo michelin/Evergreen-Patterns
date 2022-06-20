@@ -56,7 +56,7 @@ for subdir, dirs, files in os.walk(path):
         if "anti-patterns" in subdir or "patterns" in subdir:
             if re.findall(".md$", file):
                 
-                #print(os.path.join(subdir, file))
+                print(os.path.join(subdir, file))
                 origin = subdir.split("\\")
                 #print(origin[2])
                 dict_data = {}
