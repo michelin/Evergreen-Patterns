@@ -16,6 +16,7 @@ import frontmatter
 ############################################################
 #GET NUMBER OF MD FILE FOR EACH CATEGORIE
 ############################################################
+print("**LANCEMENT DU PROGRAMME**")
 dict_numbers_of_categories = {}
 path='../content'
 
