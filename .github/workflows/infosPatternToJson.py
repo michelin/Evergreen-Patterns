@@ -16,14 +16,20 @@ import frontmatter
 ############################################################
 #GET NUMBER OF MD FILE FOR EACH CATEGORIE
 ############################################################
+print("**LANCEMENT DU PROGRAMME**")
 dict_numbers_of_categories = {}
-path='../../content'
+path='..\..\content'
+print(path)
 
 for subdir, dirs, files in os.walk(path):
+    print("ok")
+    os.system('pwd')
     for file in files:
-        if "categories" not in subdir:
+        print("passe")
+        if "anti-patterns" in subdir or "patterns" in subdir:
             if re.findall(".md$", file):
                 
+                print("First loop")
                 #print(os.path.join(subdir, file))
                 md = frontmatter.load(os.path.join(subdir, file))
                 
@@ -53,10 +59,10 @@ for subdir, dirs, files in os.walk(path):
     dict_temp = {}
     dict_categorie = {}
     for file in files:
-        if "categories" not in subdir:
+        if "anti-patterns" in subdir or "patterns" in subdir:
             if re.findall(".md$", file):
                 
-                #print(os.path.join(subdir, file))
+                print(os.path.join(subdir, file))
                 origin = subdir.split("\\")
                 #print(origin[2])
                 dict_data = {}
@@ -86,9 +92,6 @@ for subdir, dirs, files in os.walk(path):
                     else:
                         #print(md['featured_image'])
                         dict_data['featured_image'] = md['featured_image']
-
-                    #print(dict_data)  
-                    #list_of_data.append(dict_data)
                     
                     #keep categorie
                     if 'categories' not in md or md['categories'] == None or len(md['categories']) == 0:
@@ -116,11 +119,6 @@ for subdir, dirs, files in os.walk(path):
                                     dict_categorie[md['categories'][i]] += "," + str(dict_data)
                     
                     
-                    #print("dict_data => ")
-                    #print(dict_data)
-                    #pprint.pprint(dict_categorie)
-                    #print(dict_categorie)
-                    #print("\n")
                 except Exception as e:
                     print(e)
                     logger.error(e)
@@ -131,8 +129,7 @@ for subdir, dirs, files in os.walk(path):
             final_dict[origin[2]] = dict_categorie
         else:
             final_dict[origin[2]].update(dict_categorie)
-            #final_dict[origin[2]] = [final_dict[origin[2]],dict_categorie]
 
 pprint.pprint(final_dict)
-with open(".github/workflows/data.json", "w", encoding="utf8") as output_file:
-    json.dump(final_dict, output_file)
+with open("data.json", "w", encoding="utf8") as output_file:
+    json.dump(final_dict, output_file) 
