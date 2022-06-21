@@ -44,7 +44,7 @@ print(dict_numbers_of_categories)
 
 
 
-logging.basicConfig(filename='myapp.log', level=logging.DEBUG, 
+logging.basicConfig(filename='./python_script/myapp.log', level=logging.DEBUG, 
                     format='%(asctime)s %(levelname)s %(name)s %(message)s')
 logger=logging.getLogger(__name__)
 dict_tmp_categorie = {}
