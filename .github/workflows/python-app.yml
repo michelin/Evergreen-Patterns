@@ -44,8 +44,8 @@ jobs:
       run: |
         git config --global user.name "ntenieres-bib"
         git config --global user.email "nathan.tenieres@michelin.com"
-    - name: Switching from HTTPS to SSH
-      run: git remote add origin https://github.com/michelin/Evergreen-Patterns.git
+    #- name: Switching from HTTPS to SSH
+     # run: git remote add origin https://github.com/michelin/Evergreen-Patterns.git
     - name: Check for changes
       run: git status
     - name: Stage changed files
