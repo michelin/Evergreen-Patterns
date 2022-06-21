@@ -13,6 +13,8 @@ permissions:
   contents: write
   actions: write
   issues: write
+  pull-requests: write
+  repository-projects: write
 
 jobs:
   build:
