@@ -127,7 +127,6 @@ for subdir, dirs, files in os.walk(path):
         else:
             final_dict[origin[2]].update(dict_categorie)
 
-print(final_dict)
 pprint.pprint(final_dict)
 with open("data.json", "w", encoding="utf8") as output_file:
     json.dump(final_dict, output_file) 
