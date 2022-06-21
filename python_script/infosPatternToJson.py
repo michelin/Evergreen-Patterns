@@ -88,30 +88,32 @@ for subdir, dirs, files in os.walk(path):
                         #print(md['featured_image'])
                         dict_data['featured_image'] = md['featured_image']
                     
+                    new_format_dict_data = re.sub("'","\"", str(dict_data))
+                    
                     #keep categorie
                     if 'categories' not in md or md['categories'] == None or len(md['categories']) == 0:
                         #print("!!NO CATEGORIES FOUND!!")
                         if "NO CATEGORIES FOUND" not in dict_tmp_categorie:
                             dict_tmp_categorie['NO CATEGORIES FOUND'] = 1
-                            dict_categorie["NO CATEGORIES FOUND"] = "[" + str(dict_data)
+                            dict_categorie["NO CATEGORIES FOUND"] = "[" + new_format_dict_data
                         else:
                             dict_tmp_categorie['NO CATEGORIES FOUND'] = dict_tmp_categorie['NO CATEGORIES FOUND'] + 1
                             if dict_tmp_categorie['NO CATEGORIES FOUND'] == dict_numbers_of_categories['NO CATEGORIES FOUND']:
-                                dict_categorie["NO CATEGORIES FOUND"] += "," + str(dict_data) + "]"
+                                dict_categorie["NO CATEGORIES FOUND"] += "," + new_format_dict_data + "]"
                             else:
-                                dict_categorie["NO CATEGORIES FOUND"] += "," + str(dict_data)
+                                dict_categorie["NO CATEGORIES FOUND"] += "," + new_format_dict_data
                     else:
                         for i in range(0, len(md['categories'])):
                             #print(md['categories'][i]) 
                             if md['categories'][i] not in dict_categorie:
                                 dict_tmp_categorie[md['categories'][i]] = 1
-                                dict_categorie[md['categories'][i]] = "[" + str(dict_data)
+                                dict_categorie[md['categories'][i]] = "[" + new_format_dict_data
                             else:
                                 dict_tmp_categorie[md['categories'][i]] = dict_tmp_categorie[md['categories'][i]] + 1
                                 if dict_tmp_categorie[md['categories'][i]] == dict_numbers_of_categories[md['categories'][i]]:
-                                    dict_categorie[md['categories'][i]] += "," + str(dict_data) + "]"
+                                    dict_categorie[md['categories'][i]] += "," + new_format_dict_data + "]"
                                 else:
-                                    dict_categorie[md['categories'][i]] += "," + str(dict_data)
+                                    dict_categorie[md['categories'][i]] += "," + new_format_dict_data
                     
                     
                 except Exception as e:
@@ -125,6 +127,7 @@ for subdir, dirs, files in os.walk(path):
         else:
             final_dict[origin[2]].update(dict_categorie)
 
+print(final_dict)
 pprint.pprint(final_dict)
 with open("data.json", "w", encoding="utf8") as output_file:
     json.dump(final_dict, output_file) 
