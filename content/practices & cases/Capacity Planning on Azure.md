@@ -60,14 +60,14 @@ When we do Capacity Planning for resources on Azure, we should consider the fact
 - Can stop at anytime and 'usually' stop the charging immediatly
 This means the Inventory step can be much lighter. However, it does NOT mean planning is no more important or needed. On the contrary, without careful planning and management, easy provisoning could cause over-book of resources and huge waste of money. 
 
-So, the main concern of Capacity Planning on Azure is over-capacity. 
+So, the main concern of Capacity Planning on Azure is over-capacity and waste (Non Value-added). 
 
 Azure resources could have 2 billing models, provisoned and pay-as-you-go. 
 
-Provisioned ones, for example Premium Storage Account, you should careful plan before provision, and monitor the actual utilization once it is in use, and adjust timely when thresholds are met.
+Provisioned ones, for example Premium Storage Account, you should careful plan before provision to ensure not over-capacity, and monitor the actual utilization once it is in use, and adjust timely when thresholds are met.
 The thresholds can be defined based on generic best practices, and gradually tuned during run.
 
-For Pay-As-You-Go resources, you do not worry too much at provisioning time. However, when resources are put in place, you'd start watching the trends, especially increase rate. Compare the rate with historical records or cross check with service consumption. So, monitoring pay-as-you-go resources should highly rely on teams who actually use the resources for upstream services, who has 1st hand info of the service consumptions.
+For Pay-As-You-Go resources, you do not worry too much at provisioning time. However, when resources are put in place, you'd find way to ensure it has the right value-added. You'd start watching the trends, especially increase rate. Compare the rate with historical records or cross check with service consumption. So, monitoring pay-as-you-go resources should highly rely on teams who actually use the resources for upstream services, who has 1st hand info of the service consumptions.
 
 ## Monitoring Approaches
 Sample: in Asia CDP (Consumer Data Platform) application, how do we apply above principles into the Capacity Monitoring.
