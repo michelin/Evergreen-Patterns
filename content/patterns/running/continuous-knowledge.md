@@ -6,7 +6,7 @@ categories:
 - running
 tags:
 - running
-description: ""
+description: "Sharing and capitalizing knowledge continuously across teams is a corner stone of efficient operations"
 featured_image: "/images/icons/continuous_knowledge.png"
 ---
 
