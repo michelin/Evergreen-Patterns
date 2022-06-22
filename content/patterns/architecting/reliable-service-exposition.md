@@ -6,7 +6,7 @@ categories:
 - architecting
 tags:
 - architecting
-description: ""
+description: "My systems expose robust and resilient APIs"
 featured_image: "/images/icons/reliable_service_exposition.png"
 ---
 
