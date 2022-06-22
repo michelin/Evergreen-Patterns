@@ -75,7 +75,7 @@ for subdir, dirs, files in os.walk(path):
                     #keep description
                     if 'description' not in md or md['description'] == None or len(md['description']) == 0:
                         #print("!!NO DESCRIPTION FOUND!!")
-                        dict_data['description'] = "!!NO DESCRIPTION FOUND!!"
+                        dict_data['description'] = "Description to come"
                     else:
                         #print(md['description'])
                         dict_data['description'] = md['description']
