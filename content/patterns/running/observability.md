@@ -4,7 +4,7 @@ date: 2022-04-12T16:11:50+02:00
 draft: false
 categories:
 - running
-description:
+description: "I proactively set up my golden signals and SLIs in order to reduce time to detect situations"
 featured_image: "/images/icons/observability.png"
 ---
 
