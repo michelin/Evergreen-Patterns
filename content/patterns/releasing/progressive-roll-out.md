@@ -6,7 +6,7 @@ categories:
 - releasing
 tags:
 - releasing
-description: ""
+description: "My systems can be deployed in small increments and enable easy upgrade or roll-back"
 featured_image: "/images/icons/progressive-roll-out.png"
 ---
 
