@@ -44,8 +44,6 @@ jobs:
       run: |
         git config --global user.name "ntenieres-bib"
         git config --global user.email "nathan.tenieres@michelin.com"
-    #- name: Switching from HTTPS to SSH
-     # run: git remote add origin https://github.com/michelin/Evergreen-Patterns.git
     - name: Check for changes
       run: git status
     - name: Stage changed files
@@ -53,10 +51,7 @@ jobs:
     - name: Commit changed files
       run: git commit -m "Updating JSON file"
     - name: Fetch from master
-      run: git fetch origin main
-    #- name: Push code to master
-     # run: git push origin main
-      
+      run: git fetch origin main 
     - name: Push changes
       uses: ad-m/github-push-action@v0.6.0
       with:
