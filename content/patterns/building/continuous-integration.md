@@ -6,7 +6,7 @@ categories:
 - building
 tags:
 - building
-description: ""
+description: "Committed changes automatically trigger the build of the entire application as well as the automated tests"
 featured_image: "/images/icons/continuous_integration.png"
 ---
 
