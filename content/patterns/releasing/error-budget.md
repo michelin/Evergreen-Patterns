@@ -6,7 +6,7 @@ categories:
   - releasing 
 tags:
   - Releasing 
-description: ""
+description: "Service Level Objective violations must be anticipated & trigger consequences"
 featured_image: "images/error-budget.jpg"
 ---
 
