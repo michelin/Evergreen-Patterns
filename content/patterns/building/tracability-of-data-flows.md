@@ -6,7 +6,7 @@ categories:
 - building
 tags:
 - building
-description: ""
+description: "My systems' dataflows are easy to monitor and diagnose thanks to correlation (UUIDs...)"
 featured_image: "/images/icons/traceability_of_data_flows.png"
 ---
 
