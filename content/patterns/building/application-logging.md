@@ -6,7 +6,7 @@ categories:
 - building
 tags:
 - building
-description: ""
+description: "My systems log information necessary for troubleshooting and monitoring"
 featured_image: "/images/icons/application_logging.png"
 ---
 
