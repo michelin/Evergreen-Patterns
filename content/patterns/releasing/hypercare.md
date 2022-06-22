@@ -4,6 +4,8 @@ date: 2022-04-12T17:46:08+02:00
 draft: false
 categories:
   - releasing
+description: ""
+featured_image: ""
 ---
 
 # Main Purpose
