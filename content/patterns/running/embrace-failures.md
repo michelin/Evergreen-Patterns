@@ -6,7 +6,7 @@ categories:
 - running
 tags:
 - running
-description: ""
+description: "I see failures as opportunities to learn and improve"
 featured_image: "/images/icons/embrace_failures.png"
 ---
 
