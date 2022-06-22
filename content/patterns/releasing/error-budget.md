@@ -7,8 +7,7 @@ categories:
 tags:
   - Releasing 
 description: ""
-images:
-    - images/error-budget.jpg
+featured_image: "images/error-budget.jpg"
 ---
 
 ![Error Budget](/images/error-budget.jpg)
