@@ -4,7 +4,7 @@ date: 2022-04-12T16:02:59+02:00
 draft: false
 categories:
 - running
-description:
+description: "My systems provide data that enable the understanding of usage"
 featured_image: "/images/icons/traceability_usage_monitoring.png"
 ---
 
