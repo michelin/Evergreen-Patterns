@@ -78,7 +78,7 @@ for subdir, dirs, files in os.walk(path):
                         dict_data['description'] = "Description to come"
                     else:
                         #print(md['description'])
-                        dict_data['description'] = md['description']
+                        dict_data['description'] = md['description'].replace("'", "#")
 
                     #keep featured image
                     if 'featured_image' not in md or md['featured_image'] == None or len(md['featured_image']) == 0:
@@ -89,31 +89,32 @@ for subdir, dirs, files in os.walk(path):
                         dict_data['featured_image'] = md['featured_image']
                     
                     new_format_dict_data = re.sub("'","\"", str(dict_data))
+                    new_format_dict_data_v2 = re.sub("#","'", new_format_dict_data)
                     
                     #keep categorie
                     if 'categories' not in md or md['categories'] == None or len(md['categories']) == 0:
                         #print("!!NO CATEGORIES FOUND!!")
                         if "NO CATEGORIES FOUND" not in dict_tmp_categorie:
                             dict_tmp_categorie['NO CATEGORIES FOUND'] = 1
-                            dict_categorie["NO CATEGORIES FOUND"] = "[" + new_format_dict_data
+                            dict_categorie["NO CATEGORIES FOUND"] = "[" + new_format_dict_data_v2
                         else:
                             dict_tmp_categorie['NO CATEGORIES FOUND'] = dict_tmp_categorie['NO CATEGORIES FOUND'] + 1
                             if dict_tmp_categorie['NO CATEGORIES FOUND'] == dict_numbers_of_categories['NO CATEGORIES FOUND']:
-                                dict_categorie["NO CATEGORIES FOUND"] += "," + new_format_dict_data + "]"
+                                dict_categorie["NO CATEGORIES FOUND"] += "," + new_format_dict_data_v2 + "]"
                             else:
-                                dict_categorie["NO CATEGORIES FOUND"] += "," + new_format_dict_data
+                                dict_categorie["NO CATEGORIES FOUND"] += "," + new_format_dict_data_v2
                     else:
                         for i in range(0, len(md['categories'])):
                             #print(md['categories'][i]) 
                             if md['categories'][i] not in dict_categorie:
                                 dict_tmp_categorie[md['categories'][i]] = 1
-                                dict_categorie[md['categories'][i]] = "[" + new_format_dict_data
+                                dict_categorie[md['categories'][i]] = "[" + new_format_dict_data_v2
                             else:
                                 dict_tmp_categorie[md['categories'][i]] = dict_tmp_categorie[md['categories'][i]] + 1
                                 if dict_tmp_categorie[md['categories'][i]] == dict_numbers_of_categories[md['categories'][i]]:
-                                    dict_categorie[md['categories'][i]] += "," + new_format_dict_data + "]"
+                                    dict_categorie[md['categories'][i]] += "," + new_format_dict_data_v2 + "]"
                                 else:
-                                    dict_categorie[md['categories'][i]] += "," + new_format_dict_data
+                                    dict_categorie[md['categories'][i]] += "," + new_format_dict_data_v2
                     
                     
                 except Exception as e:
