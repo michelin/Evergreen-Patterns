@@ -1,10 +1,14 @@
 # Generic Capacity Planing Steps
 
-Here we refer Capacity Planning as activities to understand the future needs of capacities of resources and define a actionable plan to guarantee the supply at committed time. 
+We consider Capacity Planning as activities to estimate future needs of capacities of resources and define a actionable plan to guarantee the supply at committed time. 
 
 Resources here include both IT hardware, software and services.
 
-Capacity Planning is an art of balance. You'd ensure when required, you have the right resources with just right amounts, neither lack of resources, i.e under-capacity, nor waste of resources, i.e over-capacity. 
+Capacity Planning is an art of balance. You'd ensure when required, you have the right resources with just right amounts. We want to avoid 2 situations
+- Over-Capacity, where too many resources are provided or used for nothing, which is waste.
+- Under-Capacity, where not rnough resources are available to meet the requirements, which will casue system performance issue and ruin the user experiences and impact business results. 
+
+Depending on nature of IT systems and priorities of company, one risk could be taken more serious than another. For example, if cost saving is more critical, Over-Capacity should be more carefully watched and handled. 
 
 We breakdown Capacity Planning into following iterative steps:
 
@@ -58,16 +62,17 @@ flowchart TB
 When we do Capacity Planning for resources on Azure, we should consider the facts that comparing to self-owned on-premise resources, they are
 - 'almost' unlimited, available 'immediately', once you have the Enterprise Agreement settled.
 - Can stop at anytime and 'usually' stop the charging immediatly
-This means the Inventory step can be much lighter. However, it does NOT mean planning is no more important or needed. On the contrary, without careful planning and management, easy provisoning could cause over-book of resources and huge waste of money. 
+  
+This means the Inventory step can be much lighter. However, it does NOT mean planning is no more important or needed. On the contrary, without careful planning and management, easy provisoning could cause over-capacity and waste of money. 
 
-So, the main concern of Capacity Planning on Azure is over-capacity and waste (Non Value-added). 
+So, the main concern of Capacity Planning on Azure is over-capacity (waste or Non Value-added). 
 
 Azure resources could have 2 billing models, provisoned and pay-as-you-go. 
 
 Provisioned ones, for example Premium Storage Account, you should careful plan before provision to ensure not over-capacity, and monitor the actual utilization once it is in use, and adjust timely when thresholds are met.
 The thresholds can be defined based on generic best practices, and gradually tuned during run.
 
-For Pay-As-You-Go resources, you do not worry too much at provisioning time. However, when resources are put in place, you'd find way to ensure it has the right value-added. You'd start watching the trends, especially increase rate. Compare the rate with historical records or cross check with service consumption. So, monitoring pay-as-you-go resources should highly rely on teams who actually use the resources for upstream services, who has 1st hand info of the service consumptions.
+For Pay-As-You-Go resources, you do not worry too much at provisioning time. However, when resources are put in place, you'd find way to ensure it has the approrately used for right value-added. You'd start watching the trends, especially increase rate. Compare the rate with historical records or cross check with service consumption. So, monitoring pay-as-you-go resources should highly rely on teams who actually use the resources for upstream services, who has 1st hand info of the service consumptions.
 
 ## Monitoring Approaches
 Sample: in Asia CDP (Consumer Data Platform) application, how do we apply above principles into the Capacity Monitoring.
