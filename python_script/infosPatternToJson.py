@@ -70,7 +70,7 @@ for subdir, dirs, files in os.walk(path):
                         dict_data['title'] = "!!NO TITLE FOUND!!"
                     else:
                         #print(md['title'])
-                        dict_data['title'] = md['title']
+                        dict_data['title'] = md['title'].replace("'", "#")
          
                     #keep description
                     if 'description' not in md or md['description'] == None or len(md['description']) == 0:
