@@ -6,7 +6,7 @@ categories:
 - releasing
 tags:
 - releasing
-description: ""
+description: "I deploy my systems with an automation tool which guarantees deployment is fast and reproducible"
 featured_image: "/images/icons/continuous_deployment.png"
 ---
 

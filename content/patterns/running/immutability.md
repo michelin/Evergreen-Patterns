@@ -5,7 +5,7 @@ date: 2022-04-12T12:28:04+02:00
 draft: false
 categories:
   - running
-description:
+description: "Each change is a complete re-provisioning of the environment, ensuring its configuration is 100% defined as code"
 featured_image: "/images/icons/immutabillity.png"
 ---
 

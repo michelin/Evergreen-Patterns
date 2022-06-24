@@ -4,7 +4,7 @@ date: 2022-04-12T15:59:23+02:00
 draft: false
 categories:
 - running
-description:
+description: "I know my users to provide a consistent and responsive user experience with appropriate channels for their work"
 featured_image: "/images/icons/smart_assistance.png"
 ---
 

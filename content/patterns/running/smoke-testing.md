@@ -4,7 +4,7 @@ date: 2022-04-12T15:59:09+02:00
 draft: false
 categories:
 - running
-description:
+description: "I have automated tests which validate the most critical functionalities, enabling early post change validation"
 featured_image: "/images/icons/smoke_testing.png"
 ---
 

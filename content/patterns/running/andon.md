@@ -4,7 +4,7 @@ date: 2022-04-12T16:02:59+02:00
 draft: false
 categories:
 - running
-description:
+description: "During critical failures, teams have the power to activate all relevant experts to restore production"
 featured_image: "/images/icons/andon.png"
 ---
 

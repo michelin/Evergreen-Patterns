@@ -6,7 +6,7 @@ categories:
 - running
 tags:
 - running
-description: ""
+description: "I anticipate and forecast systems activities and needs, to guarantee service level objectives and system capacity"
 featured_image: "/images/icons/capacity_planning.png"
 ---
 

@@ -6,7 +6,7 @@ categories:
 - architecting
 tags:
 - architecting
-description: ""
+description: "My data exchanges ensure consistency & integrity between systems"
 featured_image: "/images/icons/reliable_data_exchanges.png"
 ---
 

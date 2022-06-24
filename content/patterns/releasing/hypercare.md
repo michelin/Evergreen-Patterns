@@ -4,6 +4,8 @@ date: 2022-04-12T17:46:08+02:00
 draft: false
 categories:
   - releasing
+description: "I make sure that all required contributors are prepared and involved during a change on my systems to ensure prompt reaction"
+featured_image: "/images/icons/2021 Pictos releasing couleur-03.png"
 ---
 
 # Main Purpose

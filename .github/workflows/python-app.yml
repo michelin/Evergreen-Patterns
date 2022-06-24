@@ -10,9 +10,11 @@ on:
     branches: [ "main" ]
 
 permissions:
-  contents: read
+  contents: write
   actions: write
   issues: write
+  pull-requests: write
+  repository-projects: write
 
 jobs:
   build:
@@ -21,6 +23,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        github_token: ${{ secrets.TOKEN_GITHUB }}
+        branch: main 
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
@@ -39,8 +44,6 @@ jobs:
       run: |
         git config --global user.name "ntenieres-bib"
         git config --global user.email "nathan.tenieres@michelin.com"
-    - name: Switching from HTTPS to SSH
-      run: git remote set-url origin git@github.com:michelin/Evergreen-Patterns.git
     - name: Check for changes
       run: git status
     - name: Stage changed files
@@ -48,10 +51,7 @@ jobs:
     - name: Commit changed files
       run: git commit -m "Updating JSON file"
     - name: Fetch from master
-      run: git fetch origin main
-    #- name: Push code to master
-     # run: git push origin main
-      
+      run: git fetch origin main 
     - name: Push changes
       uses: ad-m/github-push-action@v0.6.0
       with:

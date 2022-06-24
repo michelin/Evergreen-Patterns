@@ -6,7 +6,7 @@ categories:
 - running
 tags:
 - running
-description: ""
+description: "My systems send notifications as soon as possible to deal with situations"
 featured_image: "/images/icons/event_management.png"
 ---
 

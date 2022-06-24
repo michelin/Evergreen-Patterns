@@ -6,7 +6,7 @@ categories:
 - building
 tags:
 - building
-description: ""
+description: "My systems' logs use standard error severities agreed between the build and operations"
 featured_image: "/images/icons/error_integration.png"
 ---
 

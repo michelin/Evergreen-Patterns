@@ -4,7 +4,7 @@ date: 2022-04-12T16:02:45+02:00
 draft: false
 categories:
 - running
-description:
+description: "I use all available options to eradicate or optimize activities by automation"
 featured_image: "/images/icons/time_is_precious.png"
 ---
 

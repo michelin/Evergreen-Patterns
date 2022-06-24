@@ -4,7 +4,7 @@ date: 2022-04-12T16:03:10+02:00
 draft: false
 categories:
 - running
-description:
+description: "My systems react automatically to an event or make users autonomous to minimize request to operations"
 featured_image: "/images/icons/self_healing.png"
 ---
 

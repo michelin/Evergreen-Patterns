@@ -4,7 +4,7 @@ date: 2022-04-12T16:02:59+02:00
 draft: false
 categories:
 - running
-description:
+description: "Tracking any type of asset that have a relationship with my systems is the foundation of efficient operations"
 featured_image: "/images/icons/up_to_date_inventory.png"
 ---
 

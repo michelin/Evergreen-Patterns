@@ -4,7 +4,7 @@ date: 2022-04-12T16:02:59+02:00
 draft: false
 categories:
 - running
-description:
+description: "During a failure my systems retain relevant logs and data to enable both quick resolution and cold analysis"
 featured_image: "/images/icons/collecting-evidence.png"
 ---
 

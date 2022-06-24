@@ -6,7 +6,7 @@ categories:
 - architecting
 tags:
 - architecting
-description: ""
+description: "My systems' architecture is continuously re-evaluated and adapted taking in account production feedback"
 featured_image: "/images/icons/continuous_architecture.png"
 ---
 
