@@ -81,8 +81,8 @@ Sample: in Asia CDP (Consumer Data Platform) application, how do we apply above 
   Billing Model: Provsioned\
   Monitoring approach: By comparing (IOPS) to upper limit \
   The Premiumu SSD attached to CDH servers are either P20 or P30. We can monitor IOPS to see whether it is over-sized. We can compare A (the max IOPS of last 30 days) to B (upper limit of the tier). 
-  - Over-sized: A < 50% * B
-  - Under-sized: A > 80% * B
+  - Over-Capacity: A < 50% * B
+  - Under-Capacity: A > 80% * B
 - Application Gateway \
   Billing Model: Provsioned with Min instance count + Auto-scale\
   Monitoring Approach: By comparing to highest watermark in last 30 days \
