@@ -5,7 +5,7 @@ draft: false
 categories:
   - releasing
 description: "I make sure that all required contributors are prepared and involved during a change on my systems to ensure prompt reaction"
-featured_image: "/images/icons/2021 Pictos releasing couleur-03.png"
+featured_image: "/images/icons/hypercare.png"
 ---
 
 # Main Purpose
