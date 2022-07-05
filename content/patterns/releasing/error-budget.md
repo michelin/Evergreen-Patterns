@@ -7,7 +7,7 @@ categories:
 tags:
   - Releasing 
 description: "Service Level Objective violations must be anticipated & trigger consequences"
-featured_image: "images/icons/error_budget.png"
+featured_image: "/images/icons/error_budget.png"
 ---
 
 # Definition
