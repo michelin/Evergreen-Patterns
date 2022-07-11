@@ -8,8 +8,18 @@ featured_image: "/images/anti-patterns/unbalanced-capacities.jpg"
 
 # Description
 
-# Some typical examples
+Your system consumes resources in order to execute the workload it is assigned. If these are not enough resources available to satisfy the demand, it is probable that the system will start becoming slower and slower, and this will introduce additional problems such as timeouts and blocked threads. 
 
 # What can be done
 
+Monitoring the Golden Signals (Saturation, Latency, Errors, Traffic) is a mandatory activity for any system. This will enable a better understanding of the usage and help in identifying trends and seasonality in usage patterns. Saturation is the key signal to understand how full the current infrastructure is and how this consumption evolves over time.
+
+Typical metrics that are directly linked with resource consmption:
+- CPU % Usage
+- Memory % Usage
+- Network Bandwidth usage
+
 # Key patterns that can mitigate this problem
+
+- Capacity Planning
+- Observability, and monitoring the Golden Signals
