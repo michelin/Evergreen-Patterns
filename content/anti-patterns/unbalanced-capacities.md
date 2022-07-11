@@ -18,6 +18,9 @@ Typical metrics that are directly linked with resource consmption:
 - CPU % Usage
 - Memory % Usage
 - Network Bandwidth usage
+- I/O 
+
+It is important to understand in your specific system what is the main resource that can become a bottleneck : it is not uncommon for example, to see systems which are more quickly restrained by I/O performance (I/O bound) than by the CPU. 
 
 # Key patterns that can mitigate this problem
 
