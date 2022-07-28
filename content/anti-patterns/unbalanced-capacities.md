@@ -14,11 +14,11 @@ Your system consumes resources in order to execute the workload it is assigned. 
 
 Monitoring the Golden Signals (Saturation, Latency, Errors, Traffic) is a mandatory activity for any system. This will enable a better understanding of the usage and help in identifying trends and seasonality in usage patterns. Saturation is the key signal to understand how full the current infrastructure is and how this consumption evolves over time.
 
-Typical metrics that are directly linked with resource consmption:
+Typical metrics that are directly linked with resource consumption:
 - CPU % Usage
 - Memory % Usage
 - Network Bandwidth usage
-- I/O 
+- Input and outputs (I/O) accesses : reads / writes on storage components
 
 It is important to understand in your specific system what is the main resource that can become a bottleneck : it is not uncommon for example, to see systems which are more quickly restrained by I/O performance (I/O bound) than by the CPU. 
 
