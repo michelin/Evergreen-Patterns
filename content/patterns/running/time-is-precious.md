@@ -5,7 +5,7 @@ draft: false
 categories:
 - running
 description: "I use all available options to eradicate or optimize activities by automation"
-featured_image: "/images/icons/time_is_precious.png"
+interact_with: "toil_routine"
 ---
 
 
