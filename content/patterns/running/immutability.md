@@ -6,7 +6,7 @@ draft: false
 categories:
   - running
 description: "Each change is a complete re-provisioning of the environment, ensuring its configuration is 100% defined as code"
-featured_image: "/images/icons/immutabillity.png"
+interact_with: "snowflake, snowball_effect, untracked_operations"
 ---
 
 # MAIN PURPOSE
