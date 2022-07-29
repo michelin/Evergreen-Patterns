@@ -5,7 +5,7 @@ draft: false
 categories:
 - running
 description: "My systems provide data that enable the understanding of usage"
-featured_image: "/images/icons/traceability_usage_monitoring.png"
+interact_with: "users, untracked_operations"
 ---
 
 
