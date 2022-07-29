@@ -5,7 +5,7 @@ draft: false
 categories:
   - releasing
 description: "I make sure that all required contributors are prepared and involved during a change on my systems to ensure prompt reaction"
-featured_image: "/images/icons/hypercare.png"
+interact_with: "overkill_response, big_bang_deployment, change_aversion"
 ---
 
 # Main Purpose
