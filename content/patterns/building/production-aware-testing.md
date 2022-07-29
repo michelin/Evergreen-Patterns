@@ -7,7 +7,7 @@ categories:
 tags:
 - building
 description: "Tests are conducted at production scale on identical infrastructure. They encompass real-world user journeys"
-featured_image: "/images/icons/production_aware_testing.png"
+interact_with: ""
 ---
 
 # MAIN PURPOSE
