@@ -7,7 +7,7 @@ categories:
 tags:
 - building
 description: "My systems are designed to gracefully handle failures in third parties"
-featured_image: "/images/icons/accounting_for_external_failures.png"
+interact_with: "sla_inversion"
 ---
 
 # DEFINITION
