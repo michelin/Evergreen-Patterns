@@ -5,7 +5,7 @@ draft: false
 categories:
 - running
 description: "I have automated tests which validate the most critical functionalities, enabling early post change validation"
-featured_image: "/images/icons/smoke_testing.png"
+interact_with: "toil_routine, change_aversion"
 ---
 
 
