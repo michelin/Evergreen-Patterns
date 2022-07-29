@@ -7,7 +7,7 @@ categories:
 tags:
 - releasing
 description: "My systems can be deployed in small increments and enable easy upgrade or roll-back"
-featured_image: "/images/icons/progressive-roll-out.png"
+interact_with: "big_bang_deployment, change_aversion"
 ---
 
 # Main Purpose
