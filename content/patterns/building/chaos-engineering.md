@@ -7,7 +7,7 @@ categories:
 tags:
 - building
 description: "I voluntarily inject chaos in my system to understand its behavior and learn how to recover and improve"
-featured_image: "/images/icons/Chaos_Monkey-31.png"
+interact_with: "users, overkill_response, hero_problem_solving, rushing_to_solution, unmastered_systems"
 ---
 
 # MAIN PURPOSE
