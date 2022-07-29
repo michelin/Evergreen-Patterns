@@ -7,7 +7,7 @@ categories:
 tags:
 - releasing
 description: "I deploy my systems with an automation tool which guarantees deployment is fast and reproducible"
-featured_image: "/images/icons/continuous_deployment.png"
+interact_with: "toil_routine, normal_errors, snowball_effect, eveything_works_all_the_time"
 ---
 
 # Main Purpose
