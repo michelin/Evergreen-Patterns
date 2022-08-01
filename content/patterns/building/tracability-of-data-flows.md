@@ -7,7 +7,7 @@ categories:
 tags:
 - building
 description: "My systems' dataflows are easy to monitor and diagnose thanks to correlation (UUIDs...)"
-featured_image: "/images/icons/traceability_of_data_flows.png"
+interact_with: "integration_points, untracked_operations"
 ---
 
 # MAIN PURPOSE

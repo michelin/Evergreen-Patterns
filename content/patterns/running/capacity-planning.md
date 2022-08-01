@@ -7,7 +7,7 @@ categories:
 tags:
 - running
 description: "I anticipate and forecast systems activities and needs, to guarantee service level objectives and system capacity"
-featured_image: "/images/icons/capacity_planning.png"
+interact_with: "unbalanced_capacities, snowball_effect, reactive_operations"
 ---
 
 # Definition

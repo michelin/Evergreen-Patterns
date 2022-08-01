@@ -7,7 +7,7 @@ categories:
 tags: 
  - architecting 
 description: "My systems are protected from third party failures"
-featured_image: "/images/icons/circuit-breaker.png"
+interact_with: "sla_inversion, integration_points, cascading_failures"
 ---
 
 The Circuit Breaker is a very popular resilience pattern to interconnect systems synchronously.

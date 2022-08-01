@@ -7,7 +7,7 @@ categories:
 tags:
 - running
 description: "I see failures as opportunities to learn and improve"
-featured_image: "/images/icons/embrace_failures.png"
+interact_with: "rushing_to_solution, untracked_operations"
 ---
 
 # Main Purpose

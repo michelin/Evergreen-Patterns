@@ -5,7 +5,7 @@ draft: false
 categories:
 - running
 description: "During a failure my systems retain relevant logs and data to enable both quick resolution and cold analysis"
-featured_image: "/images/icons/collecting-evidence.png"
+interact_with: ""
 ---
 
 

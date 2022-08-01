@@ -5,7 +5,7 @@ draft: false
 categories:
 - running
 description: "My systems react automatically to an event or make users autonomous to minimize request to operations"
-featured_image: "/images/icons/self_healing.png"
+interact_with: "toil_routine, hero_problem_solving"
 ---
 
 
