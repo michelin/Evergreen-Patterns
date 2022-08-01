@@ -3,7 +3,7 @@ title: "SLA Inversion"
 date: 2022-04-12T15:51:36+02:00
 draft: false
 description: ""
-featured_image: ""
+interact_with: "decoupling_middleware, circuit_breaker, reporting_system_health_and_state, accounting_for_third_party_failures"
 ---
 
 # DESCRIPTION

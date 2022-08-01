@@ -7,7 +7,7 @@ categories:
 tags:
 - building
 description: "My systems log information necessary for troubleshooting and monitoring"
-featured_image: "/images/icons/application_logging.png"
+interact_with: "normal_errors, rushing_to_solution, untracked_operations"
 ---
 
 # MAIN PURPOSE

@@ -7,7 +7,7 @@ categories:
 tags:
  - architecting
 description: "Business has defined expectations of my system's availability & performance"
-featured_image: "/images/icons/define_service_levels.png"
+interact_with: ""
 ---
 
 # MAIN PURPOSE

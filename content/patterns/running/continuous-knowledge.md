@@ -7,7 +7,7 @@ categories:
 tags:
 - running
 description: "Sharing and capitalizing knowledge continuously across teams is a corner stone of efficient operations"
-featured_image: "/images/icons/continuous_knowledge.png"
+interact_with: "overkill_response, hero_problem_solving, unmastered_systems"
 ---
 
 # Main Purpose

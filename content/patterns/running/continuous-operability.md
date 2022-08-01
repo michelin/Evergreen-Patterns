@@ -7,7 +7,7 @@ categories:
 tags:
 - running
 description: "My team continually improves its operations based on system health, root cause analysis, and knowledge"
-featured_image: "/images/icons/continuous_operability.png"
+interact_with: "toil_routine, normal_errors, snowball_effect, everything_works_all_the_time"
 ---
 
 

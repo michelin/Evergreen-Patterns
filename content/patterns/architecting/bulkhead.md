@@ -7,7 +7,7 @@ categories:
 tags: 
  - architecting 
 description: "My system isolate functionalities to reduce the blast radius when problems occur"
-featured_image: "/images/icons/bulkhead.png"
+interact_with: "users, cascading_failures, big_bang_deployment"
 ---
 
 For a truly resilient and self-healing architecture, you need isolation, external monitoring, and autonomous decision-making. Bulkhead pattern is one of the component of a truly resilient architecture, alongside with others like Circuit Breaker.

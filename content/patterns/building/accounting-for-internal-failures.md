@@ -7,7 +7,7 @@ categories:
 tags:
 - building
 description: "My systems are designed to gracefully handle internal errors"
-featured_image: "/images/icons/accounting_for_internal_failures.png"
+interact_with: ""
 ---
 
 # DEFINITION

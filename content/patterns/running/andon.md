@@ -5,7 +5,7 @@ draft: false
 categories:
 - running
 description: "During critical failures, teams have the power to activate all relevant experts to restore production"
-featured_image: "/images/icons/andon.png"
+interact_with: ""
 ---
 
 

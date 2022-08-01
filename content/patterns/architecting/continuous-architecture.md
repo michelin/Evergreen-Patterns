@@ -7,7 +7,7 @@ categories:
 tags:
 - architecting
 description: "My systems' architecture is continuously re-evaluated and adapted taking in account production feedback"
-featured_image: "/images/icons/continuous_architecture.png"
+interact_with: "everything_works_all_the_time"
 ---
 
 # DEFINITION

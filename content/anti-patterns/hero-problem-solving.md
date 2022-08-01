@@ -3,7 +3,7 @@ title: "Hero Problem Solving"
 date: 2022-05-29T15:53:06+02:00
 draft: false
 description: ""
-featured_image: ""
+interact_with: "smart_assistance, event_management, self_healing, observability, chaos_engineering, up_to_date_inventory, continuous_knowledge"
 ---
 
 It is very convenient to have someone in the team who knows the system very well and is able to rapidly find the issue and solve it. When major incidents happen, they get involved very quickly to fix the issue, and they do. It is however very likely that no RCA will be performed to learn, capitalize and share the knowledge. 

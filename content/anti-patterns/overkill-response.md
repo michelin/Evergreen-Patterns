@@ -3,7 +3,7 @@ title: "Overkill Response"
 date: 2022-05-29T15:53:06+02:00
 draft: false
 description: ""
-featured_image: ""
+interact_with: "chaos_engineering, continuous_knowledge, hypercare"
 ---
 
 When an issue occurs, understanding the impact and defining the right action(s) to fix it, with no or minimum side effect, is key. The set of measures should be enough to fix the issue, but not too much to avoid any unnecessary impacts. Before doing something that will have a significant impact, take a moment to see if another action is possible with a more limited impact. It is possible to have a set of gradual measures that can be applied one after another until the issue is fixed. Not applying these “just right” practices is an “overkill response” impacting Quality of Service and it may also prevent the ability to diagnose root causes. 

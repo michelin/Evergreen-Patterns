@@ -7,7 +7,7 @@ categories:
 tags:
 - building
 description: "My systems are observable: Health Checks, Technical Golden Signals and End User Experience (SLI)"
-featured_image: "/images/icons/reporting_system_health_state.png"
+interact_with: "sla_inversion"
 ---
 
 # MAIN PURPOSE

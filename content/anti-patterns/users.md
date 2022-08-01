@@ -3,7 +3,7 @@ title: "Users"
 date: 2022-05-29T15:32:37+02:00
 draft: false
 description: "You never know how users will use a system"
-featured_image: "/images/anti-patterns/users.jpg"
+interact_with: "bulkhead, chaos_engineering, traceability_and_usage_monitoring"
 ---
 
 # Description

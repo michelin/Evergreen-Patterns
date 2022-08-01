@@ -7,7 +7,7 @@ categories:
 tags:
 - building
 description: "My systems' logs use standard error severities agreed between the build and operations"
-featured_image: "/images/icons/error_integration.png"
+interact_with: "normal_errors, rushing_to_solution"
 ---
 
 # MAIN PURPOSE

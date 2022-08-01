@@ -3,7 +3,7 @@ title: "Change Aversion"
 date: 2022-05-29T15:53:06+02:00
 draft: false
 description: ""
-featured_image: ""
+interact_with: "continuous_integration, error_budget, progressive_roll-out, hypercare, smoke_testing, continuous_deployment"
 ---
 
 It is a conviction: do not evolve, improve, or change anything in a system because it works. 

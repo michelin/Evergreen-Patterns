@@ -5,7 +5,7 @@ draft: false
 categories:
 - running
 description: "I know my users to provide a consistent and responsive user experience with appropriate channels for their work"
-featured_image: "/images/icons/smart_assistance.png"
+interact_with: "hero_problem_solving"
 ---
 
 
