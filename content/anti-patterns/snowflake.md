@@ -6,7 +6,7 @@ description: ""
 featured_image: ""
 ---
 
-# DESCRIPTION
+# Description
 
 When using "mutable" infrastructure, servers have a long lifespan. They are provisionned once, and during their lifetime they will go through numerous changes.
 The nature of these changes is very diverse, some are very simple modifications of configuration, some are upgrades of some applications services, some are OS kernel upgrades.
@@ -17,8 +17,12 @@ These server have become what we call "Snowflake" servers. Servers that are the 
 
 # What can be done
 
-Immutable infrastructures are THE solution to this problem. If they are not applicable, "Infrastructure as code" tools such as Ansible can bring a lot of benefits to help uniformely execute the same changes on all servers, in all environments.
+Immutable infrastructures are THE solution to this problem. If they are not applicable, "Infrastructure as code" tools such as Ansible coupled with proper configuration management can bring a lot of benefits to help uniformely execute the same changes on all servers, in all environments.
 
 # Key patterns that can mitigate this problem
 
 - Immutability 
+
+# External Resources
+
+[Martin Fowler blog post](https://martinfowler.com/bliki/SnowflakeServer.html)
