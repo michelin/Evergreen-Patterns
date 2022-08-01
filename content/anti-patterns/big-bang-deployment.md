@@ -3,7 +3,7 @@ title: "Big Bang Deployment"
 date: 2022-04-12T15:51:36+02:00
 draft: false
 description: ""
-featured_image: ""
+interact_with: "progressive_roll-out, hypercare"
 ---
 
 # Main Purpose
