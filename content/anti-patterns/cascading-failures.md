@@ -3,7 +3,7 @@ title: "Cascading Failures"
 date: 2022-04-12T15:51:36+02:00
 draft: false
 description: ""
-featured_image: ""
+interact_with: "bulkheads, circuit_breaker, using_timeouts, "
 ---
 
 # Main Purpose
