@@ -3,7 +3,7 @@ title: "Everything Works All The Time"
 date: 2022-05-29T15:53:06+02:00
 draft: false
 description: ""
-featured_image: ""
+interact_with: "continuous_architecture, continuous_operability"
 ---
 
 Systems are designed and built considering that everything will happen as planned and are therefore only considering the “happy path”: 
