@@ -2,7 +2,7 @@
 title: "Overkill Response"
 date: 2022-05-29T15:53:06+02:00
 draft: false
-description: ""
+description: "I use drastic measures that have a large impact to fix simple issues"
 interact_with: "chaos_engineering, continuous_knowledge, hypercare"
 ---
 
