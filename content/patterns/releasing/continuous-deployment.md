@@ -7,7 +7,7 @@ categories:
 tags:
 - releasing
 description: "I deploy my systems with an automation tool which guarantees deployment is fast and reproducible"
-featured_image: "/images/icons/continuous_deployment.png"
+interact_with: "toil_routine, snowflake, change_aversion, untracked_operations"
 ---
 
 # Main Purpose

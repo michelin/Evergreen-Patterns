@@ -7,7 +7,7 @@ categories:
 tags:
 - running
 description: "My systems send notifications as soon as possible to deal with situations"
-featured_image: "/images/icons/event_management.png"
+interact_with: "reactive_operations, hero_problem_solving, unmastered_systems"
 ---
 
 # MAIN PURPOSE

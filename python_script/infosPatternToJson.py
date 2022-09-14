@@ -81,12 +81,12 @@ for subdir, dirs, files in os.walk(path):
                         dict_data['description'] = md['description'].replace("'", "#")
 
                     #keep featured image
-                    if 'featured_image' not in md or md['featured_image'] == None or len(md['featured_image']) == 0:
+                    if 'interact_with' not in md or md['interact_with'] == None or len(md['interact_with']) == 0:
                         #print("!!NO FEATURED IMAGE FOUND!!")
-                        dict_data['featured_image'] = "!!NO FEATURED IMAGE FOUND!!"
+                        dict_data['interact_with'] = "!!NO interact_with FOUND!!"
                     else:
                         #print(md['featured_image'])
-                        dict_data['featured_image'] = md['featured_image']
+                        dict_data['interact_with'] = md['interact_with']
                     
                     new_format_dict_data = re.sub("'","\"", str(dict_data))
                     new_format_dict_data_v2 = re.sub("#","'", new_format_dict_data)

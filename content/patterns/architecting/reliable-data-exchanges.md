@@ -7,7 +7,7 @@ categories:
 tags:
 - architecting
 description: "My data exchanges ensure consistency & integrity between systems"
-featured_image: "/images/icons/reliable_data_exchanges.png"
+interact_with: "integration_points, toil_routine"
 ---
 
 # MAIN PURPOSE

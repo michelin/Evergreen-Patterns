@@ -3,7 +3,7 @@ title: "Rushing to Solution"
 date: 2022-05-28T15:52:39+02:00
 draft: false
 description: "Restoring a system during an outage is the top priority but not taking enough time for collecting data or analyzing"
-featured_image: "/images/icons/rushing-to-solution.png"
+interact_with: "error_categorization, application_logging, chaos_engineering, embrace_failures"
 ---
 
 Whenever a failure occurs, restoring the service as soon as possible is of course important, but finding the root cause of the issue is also important to make sure we are doing the right actions and to prevent any reoccurrence. If the root cause can’t be found directly, then collecting the necessary elements to understand what has happened and find the root cause is key. 

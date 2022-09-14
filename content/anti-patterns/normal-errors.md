@@ -3,7 +3,7 @@ title: "Normal Errors"
 date: 2022-05-29T15:53:06+02:00
 draft: false
 description: ""
-featured_image: ""
+interact_with: "error_categorization, application_logging, continous_operability, error_budget"
 ---
 
 Observability is a key feature of a system as it allows to get an overview of the system status and detect if anything is going wrong inside the system. Reporting errors allows people operating the system to react as soon as possible thus avoiding the issue and its impact to grow. 

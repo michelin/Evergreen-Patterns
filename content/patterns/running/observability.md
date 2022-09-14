@@ -5,7 +5,7 @@ draft: false
 categories:
 - running
 description: "I proactively set up my golden signals and SLIs in order to reduce time to detect situations"
-featured_image: "/images/icons/observability.png"
+interact_with: "unbalanced_capacities, snowball_effect, reactive_operations, hero_problem_solving, unmastered_systems, untracked_operations"
 ---
 
 # Main Purpose
