@@ -2,7 +2,7 @@
 title: "Everything Works All The Time"
 date: 2022-05-29T15:53:06+02:00
 draft: false
-description: ""
+description: "My systems only implement the happy paths with no design for failure"
 interact_with: "continuous_architecture, continuous_operability"
 ---
 
