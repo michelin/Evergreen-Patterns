@@ -2,7 +2,7 @@
 title: "SLA Inversion"
 date: 2022-04-12T15:51:36+02:00
 draft: false
-description: ""
+description: "The lowest system's availability is the one of all its coupled dependencies"
 interact_with: "decoupling_middleware, circuit_breaker, reporting_system_health_and_state, accounting_for_third_party_failures"
 ---
 
