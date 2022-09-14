@@ -2,7 +2,7 @@
 title: "Cascading Failures"
 date: 2022-04-12T15:51:36+02:00
 draft: false
-description: ""
+description: "Failures of a system propagate to all its highly coupled third parties"
 interact_with: "bulkheads, circuit_breaker, using_timeouts, "
 ---
 

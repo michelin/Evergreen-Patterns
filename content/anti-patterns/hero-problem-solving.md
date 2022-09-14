@@ -2,7 +2,7 @@
 title: "Hero Problem Solving"
 date: 2022-05-29T15:53:06+02:00
 draft: false
-description: ""
+description: "Only a few specific members of my team know how to solve the issues my systems face"
 interact_with: "smart_assistance, event_management, self_healing, observability, chaos_engineering, up_to_date_inventory, continuous_knowledge"
 ---
 

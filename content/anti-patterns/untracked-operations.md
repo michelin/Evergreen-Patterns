@@ -2,7 +2,7 @@
 title: "Untracked Operations"
 date: 2022-04-12T15:51:36+02:00
 draft: false
-description: ""
+description: "Some operations done on my production systems are not tracked or auditable"
 interact_with: "application_logging, traceability_of_data_flows, observability, traceability_and_usage_monitoring, embrace_failures, immutability, continuous_deployment"
 ---
 

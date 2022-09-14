@@ -2,7 +2,7 @@
 title: "Reactive Operations"
 date: 2022-05-29T15:53:06+02:00
 draft: false
-description: ""
+description: "My operations are driven by incoming incidents and are not proactive"
 interact_with: "steady_state, event_management, observability, error_budget, capacity_planning"
 ---
 
