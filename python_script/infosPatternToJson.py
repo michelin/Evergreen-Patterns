@@ -4,11 +4,6 @@ import sys
 import logging
 import json
 import pprint
-#To add markdown,yaml parckage
-#pip install --upgrade pip
-#!{sys.executable} -m pip install markdown
-#!{sys.executable} -m pip install pyyaml
-#!{sys.executable} -m pip install python-frontmatter
 import markdown
 import yaml
 import frontmatter
