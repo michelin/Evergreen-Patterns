@@ -3,7 +3,7 @@ title: "Unbalanced Capacities"
 date: 2022-05-29T15:52:26+02:00
 draft: false
 description: "The resources consumed by my system are maladjusted to the tasks to be performed"
-interact_with: "steady_state, handshaking-backpressure, fail_fast, observability, capacity_planning"
+interact_with: "steady_state, handshaking&backpressure, fail_fast, observability, capacity_planning"
 ---
 
 # Description
