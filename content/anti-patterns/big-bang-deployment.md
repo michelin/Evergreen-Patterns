@@ -3,7 +3,7 @@ title: "Big Bang Deployment"
 date: 2022-04-12T15:51:36+02:00
 draft: false
 description: "Go live of my systems is not gradual and is a one shot and very risky operation"
-interact_with: "progressive_roll-out, hypercare"
+interact_with: "progressive_roll_out, hypercare"
 ---
 
 # Main Purpose
