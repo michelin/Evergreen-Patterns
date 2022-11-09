@@ -2,7 +2,7 @@
 title: "Snowball Effect"
 date: 2022-05-29T15:53:06+02:00
 draft: false
-description: ""
+description: "Simple problems in my systems grow bigger over time and generate unmanageable situations"
 interact_with: "steady_state, continuous_operability, observability, capacity_planning, immutability"
 ---
 

@@ -2,7 +2,7 @@
 title: "Unmastered Systems"
 date: 2022-05-29T15:53:06+02:00
 draft: false
-description: ""
+description: "I don't have a complete and detailed view of the components which my systems rely on"
 interact_with: "event_management, observability, chaos_engineering, up_to_date_inventory, continuous_knowledge"
 ---
 

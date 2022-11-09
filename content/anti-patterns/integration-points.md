@@ -2,8 +2,8 @@
 title: "Integration Points"
 date: 2022-05-29T15:53:06+02:00
 draft: false
-description: ""
-interact_with: "decoupling_middleware, circuit_breaker, reliable_data_exchange, traceability_of_data_flows"
+description: "When a system connects with another system, it takes on board failures and problems of the latter"
+interact_with: "decoupling_middleware, circuit_breaker, reliable_data_exchanges, traceability_of_data_flows"
 ---
 
 # Description

@@ -4,11 +4,6 @@ import sys
 import logging
 import json
 import pprint
-#To add markdown,yaml parckage
-#pip install --upgrade pip
-#!{sys.executable} -m pip install markdown
-#!{sys.executable} -m pip install pyyaml
-#!{sys.executable} -m pip install python-frontmatter
 import markdown
 import yaml
 import frontmatter
@@ -29,10 +24,10 @@ for subdir, dirs, files in os.walk(path):
                 md = frontmatter.load(os.path.join(subdir, file))
                 
                 if 'categories' not in md or md['categories'] == None or len(md['categories']) == 0:
-                    if "NO CATEGORIES FOUND" not in dict_numbers_of_categories:
-                        dict_numbers_of_categories['NO CATEGORIES FOUND'] = 1
+                    if "DEFAULT" not in dict_numbers_of_categories:
+                        dict_numbers_of_categories['DEFAULT'] = 1
                     else:
-                        dict_numbers_of_categories['NO CATEGORIES FOUND'] = dict_numbers_of_categories['NO CATEGORIES FOUND'] + 1
+                        dict_numbers_of_categories['DEFAULT'] = dict_numbers_of_categories['DEFAULT'] + 1
                 else:
                     for i in range(0, len(md['categories'])):
                         if md['categories'][i] not in dict_numbers_of_categories:
@@ -93,16 +88,16 @@ for subdir, dirs, files in os.walk(path):
                     
                     #keep categorie
                     if 'categories' not in md or md['categories'] == None or len(md['categories']) == 0:
-                        #print("!!NO CATEGORIES FOUND!!")
-                        if "NO CATEGORIES FOUND" not in dict_tmp_categorie:
-                            dict_tmp_categorie['NO CATEGORIES FOUND'] = 1
-                            dict_categorie["NO CATEGORIES FOUND"] = "[" + new_format_dict_data_v2
+                        #print("!!DEFAULT!!")
+                        if "DEFAULT" not in dict_tmp_categorie:
+                            dict_tmp_categorie['DEFAULT'] = 1
+                            dict_categorie["DEFAULT"] = "[" + new_format_dict_data_v2
                         else:
-                            dict_tmp_categorie['NO CATEGORIES FOUND'] = dict_tmp_categorie['NO CATEGORIES FOUND'] + 1
-                            if dict_tmp_categorie['NO CATEGORIES FOUND'] == dict_numbers_of_categories['NO CATEGORIES FOUND']:
-                                dict_categorie["NO CATEGORIES FOUND"] += "," + new_format_dict_data_v2 + "]"
+                            dict_tmp_categorie['DEFAULT'] = dict_tmp_categorie['DEFAULT'] + 1
+                            if dict_tmp_categorie['DEFAULT'] == dict_numbers_of_categories['DEFAULT']:
+                                dict_categorie["DEFAULT"] += "," + new_format_dict_data_v2 + "]"
                             else:
-                                dict_categorie["NO CATEGORIES FOUND"] += "," + new_format_dict_data_v2
+                                dict_categorie["DEFAULT"] += "," + new_format_dict_data_v2
                     else:
                         for i in range(0, len(md['categories'])):
                             #print(md['categories'][i]) 

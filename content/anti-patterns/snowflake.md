@@ -2,7 +2,7 @@
 title: "Snowflake"
 date: 2022-04-12T15:51:36+02:00
 draft: false
-description: ""
+description: "My systems are the result of accumulating numerous changes over time and are not reproductible"
 interact_with: " "
 ---
 
