@@ -3,7 +3,7 @@ title: "Change Aversion"
 date: 2022-05-29T15:53:06+02:00
 draft: false
 description: "Changing systems in production is risky so I avoid it at all cost"
-interact_with: "continuous_integration, error_budget, progressive_roll-out, hypercare, smoke_testing, continuous_deployment"
+interact_with: "continuous_integration, error_budget, progressive_roll_out, hypercare, smoke_testing, continuous_deployment"
 ---
 
 It is a conviction: do not evolve, improve, or change anything in a system because it works. 
