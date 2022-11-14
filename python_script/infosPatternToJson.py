@@ -8,6 +8,8 @@ import markdown
 import yaml
 import frontmatter
 
+#print eco
+
 ############################################################
 #GET NUMBER OF MD FILE FOR EACH CATEGORIE
 ############################################################
