@@ -9,8 +9,8 @@ on:
     paths:
       - 'content/anti-patterns/**'
       - 'content/patterns/**'
-  pull_request:
-    branches: [ "main" ]
+  #pull_request:
+  #  branches: [ "main" ]
 
 permissions:
   contents: write
