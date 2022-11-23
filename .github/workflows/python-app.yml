@@ -40,7 +40,7 @@ jobs:
         pip install pyyaml
         pip install python-frontmatter
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Run export python script
+    - name: Run python python_script/infosPatternToJson.py
       run: |
         python python_script/infosPatternToJson.py
     - name: Git authentification
