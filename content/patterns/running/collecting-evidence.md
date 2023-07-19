@@ -36,3 +36,8 @@ Some elements can have a significant size (core dumps or memory dumps for exampl
 # Example
 
 Your application may have a flag that tells whether it has been stopped properly or not (you could set this flag in a script that stops you application for example). When your application is started, it could check this flag and if it detects that the application has not been stopped correctly then it could backup some key elements (last logs, last DB transactions, …). 
+
+# External resources
+
+The SoS toolset is a good example of implementation of this pattern
+[https://github.com/sosreport/sos](https://sos.readthedocs.io/en/main/)https://sos.readthedocs.io/en/main/
