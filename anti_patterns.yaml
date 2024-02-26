@@ -40,6 +40,8 @@
     risky operation
   status: ''
   tags: ''
+  mitigation:
+    - Progressive Roll-out
 - category: anti-pattern
   image_prompt: 'A person playing Jenga'
   pattern_name: Change Aversion
@@ -124,22 +126,25 @@
   image_prompt: A person finger pointing at another
   pattern_name: The Blame Game
   prompt: ''
-  short_description: When an incident occurs, the first reflex is to find the responsible
-    person
+  short_description: When an incident occurs, the first reflex is to find the responsible person
   status: draft
   tags: ''
 - category: anti-pattern
-  image_prompt: null
+  image_prompt: An image of someone with a large ball and chain attached to its leg, trying to work on his computer
   pattern_name: Toil Routine
   prompt: ''
-  short_description: Maintaining my systems in production requires painful and recurring
-    manual tasks and checks
-  status: ''
-  tags: ''
+  short_description: Maintaining my systems in production requires painful and recurring manual tasks and checks
+  status: validated
+  tags:
+    - automation
+  mitigation:
+    - Smoke Testing
 - category: anti-pattern
   image_prompt: null
   pattern_name: Snowflake
   prompt: ''
+  mitigations:
+    - Immutability
   short_description: My systems are the result of accumulating numerous changes over
     time and are not reproductible
   status: ''
@@ -170,6 +175,8 @@
     my systems rely on
   status: ''
   tags: ''
+  mitigation:
+    - Up to date Inventory
 - category: anti-pattern
   image_prompt: null
   pattern_name: Users
@@ -177,3 +184,5 @@
   short_description: You never know how users will use a system
   status: ''
   tags: ''
+  mitigation:
+    - Chaos Engineering

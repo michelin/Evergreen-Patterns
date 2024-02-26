@@ -36,6 +36,9 @@
 - category: architecture
   image_prompt: null
   pattern_name: Steady State
+  icon_prompt: Generate a graphic icon with simple design and a single green color on a white background and a line art style.
+    The image consists of a circle with an open end on the right side where an arrow points clockwise. Inside the circle, there are three vertical lines that have the same height.
+    This kind of icon might be used to represent concepts like cycle, refresh, update, or continuous processes.
   prompt: ''
   short_description: My systems operate indefinitely in well known and monitored conditions
   status: ''
@@ -44,10 +47,10 @@
   image_prompt: null
   pattern_name: Defined Service Levels
   prompt: ''
-  short_description: Business has defined expectations of my system's availability
-    & performance
+  short_description: Business has defined expectations of my system's availability and performance
   status: ''
-  tags: ''
+  tags:
+    - 'sre'
 - category: architecture
   image_prompt: null
   pattern_name: Continuous Architecture
@@ -117,7 +120,11 @@
     costly, resource consuming (not friendly with the environment) and lack agility.
   short_description: I create temporary and disposable development and testing environments
   status: ''
-  tags: ''
+  tags:
+    - 'devops'
+    - 'sustainability'
+    - 'automation'
+    - 'testing'
 - category: building
   image_prompt: null
   pattern_name: Application Logging
@@ -172,16 +179,14 @@
   image_prompt: null
   pattern_name: Traceability of data flows
   prompt: ''
-  short_description: "My systems' dataflows are easy to monitor and diagnose thanks\
-    \ to correlation (UUIDs...)\u200B\u200B\u200B"
+  short_description: "My systems' dataflows are easy to monitor and diagnose thanks to correlation (UUIDs...)"
   status: ''
   tags: ''
 - category: building
   image_prompt: null
   pattern_name: Fail Fast
   prompt: ''
-  short_description: Before starting a task, my systems ensure it has a chance to
-    be fully completed
+  short_description: Before starting a task, my systems ensure it has a chance to be fully completed
   status: ''
   tags: ''
 - category: building
@@ -374,9 +379,8 @@
   image_prompt: null
   pattern_name: Immutability
   prompt: ''
-  short_description: Each change is a complete re-provisioning of the environment,
-    ensuring its configuration is 100% defined as code
-  status: ''
+  short_description: Each change is a complete re-provisioning of the environment, ensuring its configuration is 100% defined as code
+  status: validated
   tags:
     - 'automation'
     - 'devops'  
@@ -385,7 +389,7 @@
   pattern_name: Smoke Testing
   prompt: With this pattern, we recommend that teams use an automated test to quickly validate the success of their changes
   short_description: I have automated tests which validate the most critical functionalities, enabling quick and early post change validation
-  status: ''
+  status: validated
   tags:
     - 'testing'
     - 'automation'
