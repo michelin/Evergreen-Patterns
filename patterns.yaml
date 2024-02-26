@@ -1,34 +1,18 @@
 - category: prefix
-  image_prompt: null
-  pattern_name: ''
   prompt: We have created at work descriptions of the "Evergreen patterns" that defines best practices and methodologies
     to help teams maintain a high quality of service by building resilient, highly available, scalable and frugal software systems.
-  short_description: ''
-  status: ''
-  tags: ''
 - category: prefix
-  image_prompt: null
-  pattern_name: ''
   prompt: One of these patterns is "{{ pattern_name }} whose short description is "{{ short_description }}"".
-  short_description: ''
-  status: ''
-  tags: ''
 - category: suffix
-  image_prompt: null
-  pattern_name: ''
   prompt: 'Please create a complete description in markdown format for this pattern
     that follows this plan : Description, Key principles, Benefits, Implementation
     strategies and Related online resources. Add a last line that will contain 3 tags
     separated by commas that will be used to categorize this pattern.'
-  short_description: ''
-  status: ''
-  tags: ''
 - category: architecture
   image_prompt: A transversal view of a ship being built, showing the bulkheads
   pattern_name: Bulkheads
   prompt: ''
-  short_description: My system isolate functionalities to reduce the blast radius
-    when problems occur
+  short_description: My system isolate functionalities to reduce the blast radius when problems occur
   status: ''
   tags: ''
 - category: architecture
@@ -108,8 +92,7 @@
   image_prompt: null
   pattern_name: Cloud Native Architecture
   prompt: ''
-  short_description: My systems are designed as a sum of independent services to ensure
-    scalability, operability and agility
+  short_description: My systems are designed as a sum of independent services to ensure scalability, operability and agility
   status: ''
   tags: ''
 - category: building
@@ -255,19 +238,17 @@
   status: ''
   tags: ''
 - category: running
-  image_prompt: null
+  image_prompt: A detective looking for clues at a crime scene in a data center
   pattern_name: Collecting Evidence
   prompt: ''
-  short_description: During a failure my systems retain relevant logs and data to
-    enable both quick resolution and cold analysis
+  short_description: During a failure my systems retain relevant logs and data to enable both quick resolution and cold analysis
   status: ''
   tags: ''
 - category: running
   image_prompt: null
   pattern_name: Continuous Knowledge
   prompt: ''
-  short_description: Sharing and capitalizing knowledge continuously across teams
-    is a corner stone of efficient operations
+  short_description: Sharing and capitalizing knowledge continuously across teams is a corner stone of efficient operations
   status: ''
   tags: ''
 - category: running
@@ -281,20 +262,25 @@
   image_prompt: null
   pattern_name: Observability
   prompt: ''
-  short_description: "I proactively set up my golden signals and SLIs in order to\
-    \ reduce time to detect situations\u200B\u200B\u200B\u200B\u200B\u200B\u200B"
+  short_description: "I proactively set up my golden signals and SLIs in order to reduce time to detect situations"
   status: ''
-  tags: ''
+  tags:
+    - 'monitoring'
+    - 'observability'
+    - 'sre'
 - category: running
   image_prompt: null
   pattern_name: Event Management
   prompt: With this pattern, we encourage teams to implement the Event management
     ITIL practice that monitors all events of the IT infrastructure, in order to react
     as quickly as possible when situations occur.
-  short_description: "My systems send notifications as soon as possible to deal with\
-    \ situations\u200B\u200B\u200B\u200B\u200B\u200B\u200B"
+  short_description: "My systems send notifications as soon as possible to deal with situations"
   status: ''
-  tags: ''
+  tags:
+    - 'automation'
+    - 'itil'
+    - 'monitoring'
+    - 'observability'
 - category: running
   image_prompt: null
   pattern_name: Self Healing
@@ -302,7 +288,8 @@
   short_description: My systems react automatically to an event or make users autonomous
     to minimize request to operations
   status: ''
-  tags: ''
+  tags:
+    - 'automation'
 - category: running
   image_prompt: null
   pattern_name: Smart Assistance
@@ -333,14 +320,19 @@
   short_description: I start my environment only when I use it, it remains off by
     default
   status: ''
-  tags: ''
+  tags:
+    - 'automation'
+    - 'devops'  
 - category: releasing
   image_prompt: null
   pattern_name: Error Budget
   prompt: ''
   short_description: "Service Level Objective violations must be anticipated & trigger consequences"
   status: ''
-  tags: ''
+  tags:
+    - 'sre'
+    - 'monitoring'
+    - 'observability' 
 - category: releasing
   image_prompt: null
   pattern_name: Continuous Deployment
@@ -348,15 +340,17 @@
   short_description: "I deploy my systems with an automation tool which guarantees\
     \ deployment is fast and reproducible"
   status: ''
-  tags: ''
+  tags:
+    - 'automation'
+    - 'devops'  
 - category: releasing
   image_prompt: null
   pattern_name: Hypercare
   prompt: ''
-  short_description: "I make sure that all required contributors are prepared and\
-    \ involved during a change on my systems to ensure prompt reaction"
+  short_description: "I make sure that all required contributors are prepared and involved during a change on my systems to ensure prompt reaction"
   status: ''
-  tags: ''
+  tags:
+    - 'organization'
 - category: releasing
   image_prompt: null
   pattern_name: Progressive Roll-out
@@ -364,7 +358,8 @@
   short_description: My systems can be deployed in small increments and enable easy
     upgrade or roll-back
   status: ''
-  tags: ''
+  tags:
+    - 'devops'
 - category: releasing
   image_prompt: null
   pattern_name: Immutability
@@ -372,13 +367,16 @@
   short_description: Each change is a complete re-provisioning of the environment,
     ensuring its configuration is 100% defined as code
   status: ''
-  tags: ''
+  tags:
+    - 'automation'
+    - 'devops'  
 - category: releasing
   image_prompt: null
   pattern_name: Smoke Testing
-  prompt: With this pattern, we recommend that teams use this automated test to quickly
-    validate the success of their changes.
-  short_description: I have automated tests which validate the most critical functionalities,
-    enabling early post change validation
+  prompt: With this pattern, we recommend that teams use an automated test to quickly validate the success of their changes
+  short_description: I have automated tests which validate the most critical functionalities, enabling quick and early post change validation
   status: ''
-  tags: ''
+  tags:
+    - 'testing'
+    - 'automation'
+    - 'validation'
