@@ -13,3 +13,6 @@ min_version = "0.64.0"
 [author]
   name = "theNewDynamic"
   homepage = "https://www.thenewdynamic.com/"
+
+[params]
+  body_classes = "bg-near-white"  
