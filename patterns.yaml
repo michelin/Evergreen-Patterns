@@ -133,21 +133,23 @@
   short_description: Committed changes automatically trigger the build of the entire
     application as well as the automated tests
   status: ''
-  tags: ''
+  tags:
+    - 'automation'
+    - 'devops'
 - category: building
-  image_prompt: null
+  image_prompt: A monkey randomly pulling out cables in a data center
   pattern_name: Chaos Engineering
   prompt: ''
-  short_description: I voluntarily inject chaos in my system to understand its behavior
-    and learn how to recover and improve
+  short_description: I voluntarily inject chaos in my system to understand its behavior and learn how to recover and improve
   status: ''
-  tags: ''
+  tags:
+    - 'testing'
+    - 'sre'
 - category: building
   image_prompt: null
   pattern_name: Error Categorization
   prompt: ''
-  short_description: "My systems' logs use standard error severities agreed between\
-    \ the build and operations\u200B\u200B\u200B\u200B\u200B\u200B\u200B"
+  short_description: "My systems' logs use standard error severities agreed between the build and operations"
   status: ''
   tags: ''
 - category: building
@@ -199,7 +201,8 @@
   short_description: Upgrading my system's components and dependencies with latest
     supported version is a recurrent planned activity
   status: ''
-  tags: ''
+  tags:
+    - 'security'
 - category: building
   image_prompt: null
   pattern_name: Sustainable Fullstack
@@ -209,7 +212,8 @@
     practices that are sustainable from an energy consumption standpoint.
   short_description: I implement sustainable architecture and development practices
   status: ''
-  tags: ''
+  tags:
+    - 'sustainability'
 - category: running
   image_prompt: null
   pattern_name: Continuous Sustainability
@@ -220,15 +224,17 @@
   short_description: I integrate environmentally conscious principles into all aspects
     of a system's lifecycle
   status: ''
-  tags: ''
+  tags:
+    - 'sustainability'
 - category: running
   image_prompt: null
   pattern_name: Capacity Planning
   prompt: ''
-  short_description: I anticipate and forecast systems activities and needs, to guarantee
-    service level objectives and system capacity
+  short_description: I anticipate and forecast systems activities and needs, to guarantee service level objectives and system capacity
   status: ''
-  tags: ''
+  tags:
+    - 'sre'
+    - 'sustainability'    
 - category: running
   image_prompt: null
   pattern_name: Prod First
@@ -236,14 +242,18 @@
   short_description: During critical failures, teams have the power to activate all
     relevant experts to restore production
   status: ''
-  tags: ''
+  tags:
+    - 'organization'
+    - 'people'
 - category: running
   image_prompt: A detective looking for clues at a crime scene in a data center
   pattern_name: Collecting Evidence
   prompt: ''
   short_description: During a failure my systems retain relevant logs and data to enable both quick resolution and cold analysis
   status: ''
-  tags: ''
+  tags:
+    - 'monitoring'
+    - 'automation'
 - category: running
   image_prompt: null
   pattern_name: Continuous Knowledge
