@@ -8,14 +8,14 @@
     that follows this plan : Description, Key principles, Benefits, Implementation
     strategies and Related online resources. Add a last line that will contain 3 tags
     separated by commas that will be used to categorize this pattern.'
-- category: architecture
+- category: architecting
   image_prompt: A transversal view of a ship being built, showing the bulkheads
   pattern_name: Bulkheads
   prompt: ''
   short_description: My system isolate functionalities to reduce the blast radius when problems occur
   status: ''
   tags: ''
-- category: architecture
+- category: architecting
   image_prompt: null
   pattern_name: Decoupling
   prompt: With this pattern, we encourage architects to use middleware to enable asynchronous
@@ -25,7 +25,7 @@
   short_description: My systems use middleware to enable asynchronous data exchanges
   status: ''
   tags: ''
-- category: architecture
+- category: architecting
   image_prompt: 2 workers shaking hands
   pattern_name: Handshaking and Backpressure
   prompt: ''
@@ -33,7 +33,7 @@
     handle my workload
   status: ''
   tags: ''
-- category: architecture
+- category: architecting
   image_prompt: null
   pattern_name: Steady State
   icon_prompt: Generate a graphic icon with simple design and a single green color on a white background and a line art style.
@@ -43,7 +43,7 @@
   short_description: My systems operate indefinitely in well known and monitored conditions
   status: ''
   tags: ''
-- category: architecture
+- category: architecting
   image_prompt: null
   pattern_name: Defined Service Levels
   prompt: ''
@@ -51,7 +51,7 @@
   status: ''
   tags:
     - 'sre'
-- category: architecture
+- category: architecting
   image_prompt: null
   pattern_name: Continuous Architecture
   prompt: ''
@@ -59,21 +59,21 @@
     taking in account production feedback
   status: ''
   tags: ''
-- category: architecture
+- category: architecting
   image_prompt: null
   pattern_name: Reliable Data Exchange
   prompt: ''
   short_description: My data exchanges ensure consistency & integrity between systems
   status: ''
   tags: ''
-- category: architecture
+- category: architecting
   image_prompt: null
   pattern_name: Reliable Service Exposition
   prompt: ''
   short_description: My systems expose robust and resilient APIs
   status: ''
   tags: ''
-- category: architecture
+- category: architecting
   image_prompt: null
   pattern_name: Eco Design
   prompt: ''
@@ -81,7 +81,7 @@
     while preserving the planet
   status: ''
   tags: ''
-- category: architecture
+- category: architecting
   image_prompt: null
   pattern_name: Continuous Modernization
   prompt: With this pattern, we encourage architects to regularly review their application
@@ -91,7 +91,7 @@
     opportunities on a regular basis
   status: ''
   tags: ''
-- category: architecture
+- category: architecting
   image_prompt: null
   pattern_name: Cloud Native Architecture
   prompt: ''
@@ -289,7 +289,7 @@
   prompt: With this pattern, we encourage teams to implement the Event management
     ITIL practice that monitors all events of the IT infrastructure, in order to react
     as quickly as possible when situations occur.
-  short_description: "My systems send notifications as soon as possible to deal with situations"
+  short_description: My systems send notifications as soon as possible to deal with situations
   status: ''
   tags:
     - 'automation'

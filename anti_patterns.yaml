@@ -1,31 +1,16 @@
 - category: prefix
-  image_prompt: null
-  pattern_name: ''
   prompt: We have created at work descriptions of "anti-patterns" that defines worst
     practices and bad habbits when it comes to architecting, building, releasing or
     maintaining IT systems.
-  short_description: ''
-  status: ''
-  tags: ''
 - category: prefix
-  image_prompt: null
-  pattern_name: ''
   prompt: One of these anti-pattern is "{{ pattern_name }} which is defined as "{{ short_description }}"".
-  short_description: ''
-  status: ''
-  tags: ''
 - category: suffix
-  image_prompt: null
-  pattern_name: ''
   prompt: 'Please create a description in markdown format for this anti-pattern that
     follows this plan : Description and possible mitigations for the problem it causes.
     Add a last line that will contain 3 tags separated by commas that will be used
     to categorize the anti-pattern.'
-  short_description: ''
-  status: ''
-  tags: ''
 - category: anti-pattern
-  image_prompt: null
+  image_prompt: A domino chain reaction with 10 dominoes
   pattern_name: Cascading Failure
   prompt: ''
   short_description: Failures of a system propagate to all its highly coupled third
@@ -178,7 +163,7 @@
   mitigation:
     - Up to date Inventory
 - category: anti-pattern
-  image_prompt: null
+  image_prompt: A cat walking on a keyboard, typing random text in a business web application
   pattern_name: Users
   prompt: ''
   short_description: You never know how users will use a system
