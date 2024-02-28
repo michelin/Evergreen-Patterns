@@ -2,18 +2,15 @@
 title: Unbalanced Capacities
 date: 2024-02-24T05:52:59.528436721Z
 draft: false
-status: draft
+status: reviewed
 model: llama2:13b
 categories: 
  - anti-pattern
 tags: 
- - anti-pattern, 
+ - capacity
+ - load
 description: "The resources consumed by my system are maladjusted to the tasks to be performed."
 ---
-
-
-Anti-Pattern: Unbalanced Capacities
-=====================================
 
 Description
 ------------
@@ -29,8 +26,3 @@ To mitigate this anti-pattern, consider the following strategies:
 * **Load balancing**: Distribute workloads across multiple servers or instances to balance resource utilization. Implement load-balancing techniques such as round-robin, IP hashing, or session persistence to ensure even distribution.
 * **Resource pooling**: Pool resources from multiple servers or instances to create a shared pool that can be allocated based on demand. This helps maintain balanced capacity and utilization.
 * **Scaling**: Implement vertical scaling (upgrade individual components) or horizontal scaling (add more components) as needed to balance workloads with available resources.
-
-Tags
------
-
-* #performance #capacityplanning #loadbalancing

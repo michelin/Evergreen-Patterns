@@ -7,13 +7,9 @@ model: llama2:13b
 categories: 
  - anti-pattern
 tags: 
- - anti-pattern, 
+ - coupling 
 description: "Failures of a system propagate to all its highly coupled third parties."
 ---
-
-
-Cascading Failure: A Domino Effect of IT System Failures
-=====================================================
 
 The Cascading Failure anti-pattern describes a situation where failures of a system propagate to all its highly coupled third parties, resulting in a domino effect of failures that can bring down multiple systems and services. This phenomenon is often seen in complex, distributed systems where a failure in one component can have far-reaching consequences.
 

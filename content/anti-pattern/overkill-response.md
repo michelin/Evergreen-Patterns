@@ -7,13 +7,11 @@ model: llama2:13b
 categories: 
  - anti-pattern
 tags: 
- - anti-pattern, 
+ - mttr
 description: "I use drastic measures that have a large impact to fix simple issues."
 ---
 
-
-Overkill Response
-================
+![I use drastic measures that have a large impact to fix simple issues](/images/overkill-response.webp)
 
 The Overkill Response anti-pattern describes the tendency to use drastic measures that have a large impact to fix simple issues. This can manifest in various ways, such as:
 

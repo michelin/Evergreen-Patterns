@@ -7,13 +7,12 @@ model: llama2:13b
 categories: 
  - anti-pattern
 tags: 
- - anti-pattern, 
+ - people
+ - organization
 description: "When an incident occurs, the first reflex is to find the responsible person."
 ---
 
-
-The Blame Game Anti-Pattern
-==========================
+![When an incident occurs, the first reflex is to find the responsible person.](/images/the-blame-game.webp)
 
 The Blame Game is an anti-pattern that occurs when an incident occurs, and the first reflex is to find the responsible person. This can lead to a culture of blaming individuals rather than addressing the root causes of the problem.
 

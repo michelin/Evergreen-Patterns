@@ -2,18 +2,17 @@
 title: Toil Routine
 date: 2024-02-24T05:52:34.82266885Z
 draft: false
-status: draft
+status: reviewed
 model: llama2:13b
 categories: 
  - anti-pattern
 tags: 
- - anti-pattern, 
+ - automation
+ - toil
 description: "Maintaining my systems in production requires painful and recurring manual tasks and checks."
 ---
 
-
-Anti-Pattern: Toil Routine
-=============================
+![Maintaining my systems in production requires painful and recurring manual tasks and checks](/images/toil-routine.webp)
 
 Description
 -----------
@@ -40,5 +39,3 @@ The Toil Routine can have several negative consequences, including:
 2. Decreased efficiency and productivity due to the repetitive nature of the tasks.
 3. Higher risk of human error due to the manual nature of the tasks.
 4. Difficulty in scaling systems as the organization grows.
-
-Tags: #maintenance, #production, #automation, #monitoring
