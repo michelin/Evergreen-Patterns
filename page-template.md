@@ -1,7 +1,6 @@
 ---
 title: "{{ pattern_name}}"
 date: {{ creation_date }}
-featured_image: "/images/{{ pattern_slug }}.webp"
 draft: false
 status: {{ status }}
 model: {{ model }}
@@ -13,5 +12,7 @@ tags:[]
 {% endfor %}
 description: "{{ short_description }}"
 ---
+
+![{{ short_description }}](/images/{{ pattern_slug }}.webp)
 
 {{ page_contents }}
