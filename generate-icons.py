@@ -1,28 +1,20 @@
+# prompt = "Generate a single color green logo for an operability best practice called "{{pattern_name}}", that is defined as "{{short_description}}""
+
+
 import os
 import yaml
-from PIL import Image, ImageFont, ImageDraw, ImageColor
+from PIL import Image, ImageDraw, ImageColor
 
 card_size = (650, 1004)
 
 x_center = card_size[0] / 2
 y_center = card_size[1] / 2
 
-font_size = 36
-
-michelin_font = ImageFont.truetype("themes/evergreen/assets/evergreen/fonts/MichelinUnitTitling-SemiBold.ttf", size=40)
-font = ImageFont.truetype("themes/evergreen/assets/evergreen/fonts/Swansea-q3pd.ttf", size=40)
-
 colors ={'architecting':ImageColor.getrgb('#00866e'),
     'running':ImageColor.getrgb('#00b06f'),
     'building':ImageColor.getrgb('#00cc9b'),
     'releasing':ImageColor.getrgb('#3c7e5a'),
     'anti-pattern':ImageColor.getrgb('#ff7346')}
-
-family_names = {'architecting':'Architecting\nSystems',
-    'running':'Running\nSystems',
-    'building':'Building\nSystems',
-    'releasing':'Releasing\nSystems',
-    'anti-pattern':'Anti-Patterns'}
 
 white = (255, 255, 255, 255)
 
@@ -43,21 +35,22 @@ def draw_text(draw, text, color, x, y, font, align):
 
     draw.text((x, y), text, color, font=font, align=align, anchor="mm")
 
-def generate_cards(yml_file):
+def generate_icons(yml_file):
     with open(yml_file, newline='') as yamlfile:
         cards = yaml.load(yamlfile, Loader=yaml.FullLoader)
         for card in cards:
             if card['category'] == 'prefix' or card['category'] == 'suffix':
                 continue
 
-            print(card)
+            pattern_slug = card['pattern_name'].lower().replace(' ', '-')
+            icon_file = f"static/images/icons/{pattern_slug}.png"
 
-            card_file = f"static/cards/{card['pattern_name']}.png"
-
-            # check if card already exists
-            if os.path.exists(card_file):
-                print(f"Card {card['pattern_name']} already exists")
+            # check if icon already exists
+            if os.path.exists(icon_file):
+                print(f"Icon for {card['pattern_name']} already exists")
                 continue
+
+            print(f"Creating icon for {card['pattern_name']}")
 
             color = colors[card['category']]
 
@@ -76,9 +69,9 @@ def generate_cards(yml_file):
             draw.line([200, 750, 450, 750], fill=white, width=8)
 
             # save card
-            img.save(card_file)
+            img.save(icon_file)
 
 
 
-generate_cards('patterns.yaml')
-generate_cards('anti_patterns.yaml')
+generate_icons('patterns.yaml')
+generate_icons('anti_patterns.yaml')
