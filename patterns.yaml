@@ -198,7 +198,7 @@
   tags: ''
 - category: building
   image_prompt: null
-  pattern_name: Continuous Obsolence Housekeeping
+  pattern_name: Continuous Obso Housekeeping
   prompt: With this pattern, we encourage build teams to regularly update their application
     dependencies and runtimes and to not wait for obsolescence of their dependencies.
     We encourage in this pattern that they regularly review their main dependencies

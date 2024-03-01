@@ -164,10 +164,32 @@
     - Up to date Inventory
 - category: anti-pattern
   image_prompt: A cat walking on a keyboard, typing random text in a business web application
-  pattern_name: Users
+  pattern_name: Unexpected Usage
   prompt: ''
   short_description: You never know how users will use a system
   status: ''
   tags: ''
   mitigation:
     - Chaos Engineering
+- category: anti-pattern
+  image_prompt: ''
+  pattern_name: Infinite Resources
+  prompt: ''
+  short_description: I use IT/Digital diregarding the finite nature of our environment and its overexploitation
+  status: 'reviewed'
+  tags:
+    - sustainability
+    - greenit
+  mitigation:
+    - Eco Design
+- category: anti-pattern
+  image_prompt: ''
+  pattern_name: Procrastination
+  prompt: ''
+  short_description: Delaying to a later time leads to negative consequences and increased stress in the long run
+  status: 'reviewed'
+  tags:
+    - sustainability
+    - greenit
+  mitigation:
+    - Eco Design    
