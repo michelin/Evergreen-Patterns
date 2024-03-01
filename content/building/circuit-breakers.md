@@ -6,7 +6,9 @@ status: reviewed
 categories: 
  - building
 tags: 
- - building, resilience, fault-tolerance, software-architecture
+ - resilience
+ - fault-tolerance
+ - software-architecture
 description: My systems are protected from third party failures.
 ---
 
