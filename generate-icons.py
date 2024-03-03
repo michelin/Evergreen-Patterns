@@ -48,11 +48,20 @@ def generate_icons(yml_file):
                     img = img.crop(bounds)
                 else:
                     print(f"Icon for {pattern['pattern_name']} is already cropped")
+
+                # convert white to transparent
+                img = img.convert('RGBA')
+                datas = img.getdata()
+                newData = []
+                for item in datas:
+                    if item[0] > 220 and item[1] > 220 and item[2] > 220:
+                        newData.append((255, 255, 255, 0))
+                    else:
+                        newData.append(item)
+                img.putdata(newData)   
                 
                 # create 1bpp icon
-                img =img.convert('L')
-                img = img.point(lambda p: p > 252 and 255)
-                img = img.convert('1')
+                img = img.point(lambda p: p > 254 and 255)
                 img.save(icon_file)
 
             else:

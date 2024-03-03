@@ -8,10 +8,8 @@ card_size = (650, 1000)
 x_center = card_size[0] / 2
 y_center = card_size[1] / 2
 
-font_size = 36
-
-michelin_font = ImageFont.truetype("themes/evergreen/assets/evergreen/fonts/MichelinUnitTitling-SemiBold.ttf", size=40)
-font = ImageFont.truetype("themes/evergreen/assets/evergreen/fonts/Swansea-q3pd.ttf", size=40)
+michelin_font = ImageFont.truetype("themes/evergreen/assets/evergreen/fonts/MichelinUnitTitling-SemiBold.ttf", size=44)
+font = ImageFont.truetype("themes/evergreen/assets/evergreen/fonts/Swansea-q3pd.ttf", size=36)
 
 colors ={'architecting':ImageColor.getrgb('#00866eff'),
     'running':ImageColor.getrgb('#00b06fff'),
@@ -28,19 +26,18 @@ family_names = {'architecting':'Architecting\nSystems',
 white = (255, 255, 255, 255)
 
 def draw_text(draw, text, color, x, y, font, align):
-    mask = font.getmask(text, "L")
-    bbox = mask.getbbox()
+    bbox = font.getmask(text, "L").getbbox()
+    height = bbox[3] - bbox[1]
     words = text.split(' ')
-    if len(words) > 0 and bbox[2] > card_size[0]:
+    if len(words) > 1 and bbox[2] > card_size[0]:
         removed = 0
         while removed < len(words) and bbox[2] > card_size[0]:
             removed+=1
             text = " ".join(words[:-removed])
-            mask = font.getmask(text, "L")
-            bbox = mask.getbbox()
+            bbox = font.getmask(text, "L").getbbox()
         remaining_text = " ".join(words[-removed:])
         if len(remaining_text) > 0:
-            draw_text(draw, remaining_text, color, x, y+font_size, font, align)
+            draw_text(draw, remaining_text, color, x, y+height, font, align)
 
     draw.text((x, y), text, color, font=font, align=align, anchor="mm")
 
@@ -57,11 +54,6 @@ def generate_cards(yml_file):
             card_file = f"static/cards/{pattern_slug}.png"
             # create folder if needed
             os.makedirs(os.path.dirname(card_file), exist_ok=True)
-            
-            # check if card already exists
-            if os.path.exists(card_file):
-                print(f"Card for {card['pattern_name']} already exists")
-                continue
 
             color = colors[card['category']]
 
@@ -87,7 +79,7 @@ def generate_cards(yml_file):
             draw.rectangle([0, 650, card_size[0], card_size[1]], fill=color)
 
             # draw text on card
-            draw_text(draw, family_names[card['category']], color, x_center, 50, michelin_font, "left")
+            draw_text(draw, family_names[card['category']], color, x_center, 90, michelin_font, "left")
             draw_text(draw, card['short_description'], white, x_center, 800, font,"center")
             draw_text(draw, card['pattern_name'], white, x_center, 700, michelin_font, "center")
 
