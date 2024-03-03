@@ -1,8 +1,9 @@
 import os
 import yaml
-from PIL import Image, ImageFont, ImageDraw, ImageColor
+import re
+from PIL import Image, ImageFont, ImageDraw, ImageColor, ImageOps
 
-card_size = (650, 1004)
+card_size = (650, 1000)
 
 x_center = card_size[0] / 2
 y_center = card_size[1] / 2
@@ -12,11 +13,11 @@ font_size = 36
 michelin_font = ImageFont.truetype("themes/evergreen/assets/evergreen/fonts/MichelinUnitTitling-SemiBold.ttf", size=40)
 font = ImageFont.truetype("themes/evergreen/assets/evergreen/fonts/Swansea-q3pd.ttf", size=40)
 
-colors ={'architecting':ImageColor.getrgb('#00866e'),
-    'running':ImageColor.getrgb('#00b06f'),
-    'building':ImageColor.getrgb('#00cc9b'),
-    'releasing':ImageColor.getrgb('#3c7e5a'),
-    'anti-pattern':ImageColor.getrgb('#ff7346')}
+colors ={'architecting':ImageColor.getrgb('#00866eff'),
+    'running':ImageColor.getrgb('#00b06fff'),
+    'building':ImageColor.getrgb('#00cc9bff'),
+    'releasing':ImageColor.getrgb('#3c7e5aff'),
+    'anti-pattern':ImageColor.getrgb('#ff7346ff')}
 
 family_names = {'architecting':'Architecting\nSystems',
     'running':'Running\nSystems',
@@ -50,18 +51,36 @@ def generate_cards(yml_file):
             if card['category'] == 'prefix' or card['category'] == 'suffix':
                 continue
 
-            print(card)
+            pattern_slug = card['pattern_name'].lower().replace(' ', '-')
+            pattern_slug = re.sub(rf'[!]', '', pattern_slug)
 
-            card_file = f"static/cards/{card['pattern_name']}.png"
-
+            card_file = f"static/cards/{pattern_slug}.png"
+            # create folder if needed
+            os.makedirs(os.path.dirname(card_file), exist_ok=True)
+            
             # check if card already exists
             if os.path.exists(card_file):
-                print(f"Card {card['pattern_name']} already exists")
+                print(f"Card for {card['pattern_name']} already exists")
                 continue
 
             color = colors[card['category']]
 
+            icon_file = f"static/images/icons/{pattern_slug}.png"
+            if not os.path.exists(icon_file):
+                print(f"Icon for {card['pattern_name']} does not exist")
+                continue
+            icon = Image.open(icon_file)
+            icon = icon.convert('L')
+            icon =  ImageOps.colorize(icon, color, white)
+
+            icon_width = 370
+            
+            # resize icon to icon_width width, maintaining aspect ratio
+            ratio = icon.height / icon.width 
+            icon = icon.resize((icon_width, int(icon_width*ratio)), resample=Image.LANCZOS)
+
             img = Image.new('RGBA', card_size, white)
+            img.paste(icon, (int((card_size[0] - icon_width) / 2), 400 - int(icon.height / 2)))
 
             # create a rectangle with the color
             draw = ImageDraw.Draw(img)
