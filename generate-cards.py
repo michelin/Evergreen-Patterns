@@ -71,11 +71,21 @@ def generate_cards(yml_file):
             ratio = icon.height / icon.width 
             icon = icon.resize((icon_width, int(icon_width*ratio)), resample=Image.LANCZOS)
 
-            img = Image.new('RGBA', card_size, white)
-            img.paste(icon, (int((card_size[0] - icon_width) / 2), 400 - int(icon.height / 2)))
+            card_image = Image.new('RGBA', card_size, white)
+            card_image.paste(icon, (int((card_size[0] - icon_width) / 2), 400 - int(icon.height / 2)))
+
+            # generate a smaller version of the icon
+            small_icon = Image.open(icon_file)
+            small_icon = small_icon.convert('L')
+            # invert the colors of the smaller icon
+            small_icon =  ImageOps.colorize(small_icon, white, color)            
+            small_icon = small_icon.resize((80, int(80*ratio)), resample=Image.LANCZOS)
+            # make it square
+            small_icon = ImageOps.pad(small_icon, (80, 100), color=color)
+            card_image.paste(small_icon, (60, 30))
 
             # create a rectangle with the color
-            draw = ImageDraw.Draw(img)
+            draw = ImageDraw.Draw(card_image)
             draw.rectangle([0, 650, card_size[0], card_size[1]], fill=color)
 
             # draw text on card
@@ -87,7 +97,7 @@ def generate_cards(yml_file):
             draw.line([200, 750, 450, 750], fill=white, width=8)
 
             # save card
-            img.save(card_file)
+            card_image.save(card_file)
 
 
 
