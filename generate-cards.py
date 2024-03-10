@@ -10,6 +10,7 @@ y_center = card_size[1] / 2
 
 michelin_font = ImageFont.truetype("themes/evergreen/assets/evergreen/fonts/MichelinUnitTitling-SemiBold.ttf", size=44)
 font = ImageFont.truetype("themes/evergreen/assets/evergreen/fonts/Swansea-q3pd.ttf", size=36)
+font_spacing_y = 6
 
 colors ={'architecting':ImageColor.getrgb('#00866eff'),
     'running':ImageColor.getrgb('#00b06fff'),
@@ -25,9 +26,14 @@ family_names = {'architecting':'Architecting\nSystems',
 
 white = (255, 255, 255, 255)
 
+def draw_text_left_align(draw, text, color, x, y, font):
+    draw.text((x, y), text, color, font=font, align="left", anchor="lm")
+
+
 def draw_text(draw, text, color, x, y, font, align):
     bbox = font.getmask(text, "L").getbbox()
     height = bbox[3] - bbox[1]
+    max_y = y + height + font_spacing_y
     words = text.split(' ')
     if len(words) > 1 and bbox[2] > card_size[0]:
         removed = 0
@@ -37,9 +43,10 @@ def draw_text(draw, text, color, x, y, font, align):
             bbox = font.getmask(text, "L").getbbox()
         remaining_text = " ".join(words[-removed:])
         if len(remaining_text) > 0:
-            draw_text(draw, remaining_text, color, x, y+height, font, align)
+            max_y = draw_text(draw, remaining_text, color, x, y+height + font_spacing_y, font, align)
 
     draw.text((x, y), text, color, font=font, align=align, anchor="mm")
+    return max_y
 
 def generate_cards(yml_file):
     with open(yml_file, newline='') as yamlfile:
@@ -81,7 +88,7 @@ def generate_cards(yml_file):
             small_icon =  ImageOps.colorize(small_icon, white, color)            
             small_icon = small_icon.resize((80, int(80*ratio)), resample=Image.LANCZOS)
             # make it square
-            small_icon = ImageOps.pad(small_icon, (80, 100), color=color)
+            small_icon = ImageOps.pad(small_icon, (80, 80), color=color)
             card_image.paste(small_icon, (60, 30))
 
             # create a rectangle with the color
@@ -89,12 +96,14 @@ def generate_cards(yml_file):
             draw.rectangle([0, 650, card_size[0], card_size[1]], fill=color)
 
             # draw text on card
-            draw_text(draw, family_names[card['category']], color, x_center, 90, michelin_font, "left")
-            draw_text(draw, card['short_description'], white, x_center, 800, font,"center")
-            draw_text(draw, card['pattern_name'], white, x_center, 700, michelin_font, "center")
+            draw_text_left_align(draw, family_names[card['category']], color, 170, 70, michelin_font)
+            y = draw_text(draw, card['pattern_name'], white, x_center, 700, michelin_font, "center")
 
             # draw a white line to separate the title from the description
-            draw.line([200, 750, 450, 750], fill=white, width=8)
+            draw.line([200, y, 450, y], fill=white, width=8)
+
+            # write the image description
+            draw_text(draw, card['short_description'], white, x_center, y + 80, font,"center")
 
             # save card
             card_image.save(card_file)
