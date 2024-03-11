@@ -7,6 +7,7 @@ import json
 import yaml
 from datetime import datetime
 from openai import OpenAI
+import frontmatter
 
 # set the logging level
 logging.basicConfig(level=logging.INFO)
@@ -80,16 +81,9 @@ def generate_pattern(prompt, prefix, suffix, model_name, responses):
   # check if the file already exists and if it does, read the status
   file_status = None
   if os.path.exists(output_file_name):
-    # open the file and read the contents
-    with open(output_file_name, 'r', newline='') as mdfile:
-      filecontents = mdfile.read()
-      # iterate through the lines in the file
-      for line in filecontents.split('\n'):
-        line = line.strip()
-        if line.startswith('status'):
-          # get the status from the file
-          file_status = line.split(':')[1].strip()
-          break
+    fm = frontmatter.Frontmatter().read_file(output_file_name)
+    tags = fm['attributes']['tags']
+    file_status = fm['attributes']['status']
 
   if file_status == 'reviewed':
     logging.debug(f"Skipping {prompt['pattern_name']} as it is already reviewed.")
