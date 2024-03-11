@@ -6,9 +6,14 @@ status: reviewed
 categories: 
  - architecture
 tags: 
- - architecture, continuous, resilient, adaptive
+ - continuous
+ - adaptive
 description: My systems' architecture is continuously re-evaluated and adapted taking in account production feedback.
 ---
+
+![Card for Continuous Architecture.](/cards/continuous-architecture.png)
+![My systems' architecture is continuously re-evaluated and adapted taking in account production feedback.](/images/continuous-architecture.webp)
+
 
 # Description
 
