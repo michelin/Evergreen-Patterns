@@ -1,0 +1,103 @@
+Here are the associations between the anti-patterns and the patterns that can help mitigate them, along with brief explanations:
+
+Cascading Failure:
+
+Bulkheads: Isolating functionalities reduces the impact of failures on other parts of the system.
+Circuit Breakers: Protecting systems from third-party failures prevents cascading failures.
+
+Big Bang Deployment:
+
+Progressive Roll-out: Deploying systems in small increments enables easy upgrades and roll-backs, reducing the risk of big bang deployments.
+Continuous Deployment: Automating deployments ensures they are fast and reproducible, making gradual deployments more feasible.
+
+Change Aversion:
+
+Continuous Architecture: Continuously re-evaluating and adapting the architecture based on production feedback encourages embracing change.
+Embrace Failures: Seeing failures as opportunities to learn and improve helps overcome the fear of change.
+Hero Problem Solving:
+
+Continuous Knowledge: Sharing and capitalizing knowledge across teams ensures that problem-solving capabilities are distributed.
+Application Logging: Logging necessary information for troubleshooting enables more team members to diagnose and resolve issues.
+
+Everything works all the time!:
+
+Accounting for Internal Failures: Designing systems to gracefully handle internal errors prepares them for potential failures.
+Chaos Engineering: Voluntarily injecting chaos helps understand the system's behavior and improves resilience.
+
+Integration Point:
+
+Decoupling: Using middleware for asynchronous data exchanges reduces the impact of failures between integrated systems.
+Circuit Breakers: Protecting systems from third-party failures minimizes the propagation of issues through integration points.
+
+Overkill Response:
+
+Error Categorization: Using standard error severities helps identify the appropriate response level for different types of issues.
+Observability: Setting up golden signals and SLIs enables better situational awareness and targeted responses.
+
+Normal Errors:
+
+Error Categorization: Standardizing error severities helps differentiate between relevant and irrelevant errors.
+Application Logging: Logging necessary information assists in identifying and resolving actual problems.
+Reactive Operations:
+
+Observability: Proactively setting up golden signals and SLIs enables early detection and proactive operations.
+Capacity Planning: Anticipating and forecasting system activities and needs allows for proactive management.
+
+SLA Inversion:
+
+Defined Service Levels: Defining clear expectations of system availability and performance helps align SLAs across dependencies.
+Handshaking and Backpressure: Collaborating with third parties ensures they can handle the workload and meet SLAs.
+Rushing to solution:
+
+Collecting Evidence: Retaining relevant logs and data during failures enables thorough analysis and informed resolution.
+Hypercare: Ensuring all required contributors are prepared and involved during changes allows for prompt and thoughtful reactions.
+
+Snowball Effect:
+
+Continuous Obso Housekeeping: Regularly upgrading components and dependencies prevents the accumulation of problems over time.
+Observability: Monitoring golden signals and SLIs enables early detection and resolution of growing issues.
+
+The Blame Game:
+
+Embrace Failures: Seeing failures as opportunities to learn and improve shifts the focus from blaming to problem-solving.
+Continuous Knowledge: Sharing knowledge across teams fosters a collaborative approach to incident resolution.
+
+Toil Routine:
+
+Immutability: Ensuring the configuration is 100% defined as code reduces manual tasks and checks.
+Continuous Deployment: Automating deployments eliminates repetitive and error-prone manual steps.
+
+Snowflake:
+
+Immutability: Completely re-provisioning the environment for each change ensures reproducibility and consistency.
+Ephemeral Environments: Creating temporary and disposable environments reduces the accumulation of unique configurations.
+
+Unbalanced Capacities:
+
+Capacity Planning: Anticipating and forecasting system activities and needs helps ensure resources are properly allocated.
+Cloud Native Architecture: Designing systems as independent services enables scalability and efficient resource utilization.
+
+Untracked Operations:
+
+Traceability of data flows: Making data flows easy to monitor and diagnose enables tracking and auditing of operations.
+Up to date Inventory: Tracking all assets related to the systems provides a foundation for auditable operations.
+
+Unmastered Systems:
+
+Up to date Inventory: Maintaining a complete and detailed view of system components helps master the systems.
+Continuous Architecture: Continuously re-evaluating and adapting the architecture improves understanding and control of the systems.
+
+Unexpected Usage:
+
+Traceability and Usage Monitoring: Providing data that enables understanding of usage patterns helps anticipate and adapt to unexpected usage.
+Chaos Engineering: Voluntarily injecting chaos helps uncover unexpected usage scenarios and improves system resilience.
+Infinite Resources:
+
+Eco Design: Creating digital applications that improve customer experience while preserving the planet promotes sustainable resource usage.
+Continuous Sustainability: Integrating environmentally conscious principles into the system's lifecycle helps manage finite resources.
+Procrastination:
+
+Continuous Obso Housekeeping: Regularly upgrading components and dependencies prevents the accumulation of technical debt.
+Embrace Failures: Seeing failures as opportunities to learn and improve encourages timely action and reduces procrastination.
+
+These associations and explanations provide guidance on how the given patterns can be applied to mitigate the corresponding anti-patterns, promoting better practices in IT systems and operations.
