@@ -1,42 +1,30 @@
 ---
-title: SLA Inversion
-date: 2024-02-24T05:51:42.224452007Z
+title: "SLA Inversion"
+date: 2024-03-11T06:51:53+01:00
 draft: false
-status: draft
-model: llama2:13b
+status: reviewed
+model: gpt-4-turbo-preview
 categories: 
  - anti-pattern
 tags: 
- - anti-pattern, 
+ - coupling
+ - availability
 description: "The lowest system's availability is the one of all its coupled dependencies."
 ---
 
+![Card for SLA Inversion.](/cards/sla-inversion.png)
+![The lowest system's availability is the one of all its coupled dependencies.](/images/sla-inversion.webp)
 
-SLA Inversion: A Silent Killer of IT Systems
-==============================================
+# Description
 
-The SLA Inversion anti-pattern describes the situation where the lowest system availability is determined by the availability of all its coupled dependencies. This means that if one of the dependent systems is down, the entire system is considered unavailable, even if the primary system is functioning properly. This can lead to significant problems in maintaining the desired level of service and meeting SLAs (Service Level Agreements).
+SLA Inversion occurs in IT systems when the system's overall availability and reliability are determined by the least reliable of its coupled dependencies rather than its own intrinsic design or capabilities. This anti-pattern emerges in architectures where critical components or services depend on external systems, APIs, or services that have lower availability guarantees (SLAs - Service Level Agreements) than the system itself aims to provide. The consequence is a cascading effect where the weakest link determines the maximum achievable reliability and availability of the entire ecosystem, often leading to frequent downtimes, degraded performance, and ultimately, a disappointed user base. This incongruence between expected and actual system performance can erode trust and deter users, impacting the business negatively.
 
-Possible Mitigations:
------------------------
+# Possible Mitigations
 
-To mitigate the effects of SLA Inversion, consider the following strategies:
+1. **Dependency Evaluation and Management**: Regularly assess the reliability and SLAs of all external dependencies. Prioritize dependencies based on their criticality to your system's operations and seek alternatives for those with poor performance histories.
+2. **Robust Architectural Design**: Design your system with redundancy and fallback mechanisms for critical dependencies. Utilize patterns such as Circuit Breaker and Bulkhead to isolate failures and prevent them from cascading through your system.
+3. **Performance Contracts**: Where possible, negotiate SLAs with external service providers to ensure their commitments align with your system's requirements. This might involve additional costs but can be crucial for maintaining system reliability.
+4. **Monitoring and Alerting**: Implement comprehensive monitoring for all external dependencies to quickly identify and respond to issues. Establish alerting thresholds that allow for proactive problem-solving before SLA breaches occur.
+5. **Decoupling and Modularity**: Where feasible, architect your system in a modular fashion that allows for the easy replacement or bypass of unreliable dependencies. This may also involve building internal capabilities that can serve as backups to critical external services.
 
-* Modular design: Break down the system into smaller, independent components to reduce the impact of any single dependency.
-* Redundancy and failover: Implement redundant components and failover mechanisms to ensure that the system remains available even if one or more dependencies are down.
-* Load balancing: Distribute workloads across multiple instances or servers to minimize the impact of a single point of failure.
-* SLA-based monitoring: Monitor the SLAs of all dependent systems and adjust the SLA of the primary system accordingly.
-
-Problem Caused:
----------------
-
-SLA Inversion can lead to significant problems, including:
-
-* Unpredictable downtime: The unavailability of dependent systems can cause unexpected downtime for the primary system, leading to unhappy customers and lost revenue.
-* Difficulty in meeting SLAs: The lowered availability of the dependent systems can make it challenging to meet the desired level of service, potentially leading to penalties or legal action.
-* Increased support costs: SLA Inversion can result in a higher number of support incidents, increasing the cost of maintaining the system.
-
-Three tags for this anti-pattern are:
------------------------------------
-
-#SLAInversion #AntiPattern #ITSystems
+Mitigating SLA inversion requires a strategic approach to system design and dependency management, ensuring that external factors do not compromise your system's core objectives and service guarantees.
