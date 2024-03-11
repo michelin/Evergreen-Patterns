@@ -6,9 +6,9 @@ status: {{ status }}
 model: {{ model }}
 categories: 
  - {{ category }}
-tags:[] 
+tags: 
 {% for tag in tags %}
-    {{ tag }}, 
+ - {{ tag }} 
 {% endfor %}
 description: "{{ short_description }}"
 ---
