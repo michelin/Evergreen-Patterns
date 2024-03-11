@@ -6,13 +6,18 @@ status: reviewed
 categories: 
  - running
 tags: 
- - running, capacity, optimization, resource-management, sustainability
+ - capacity
+ - optimization
+ - resource-management
+ - greenit
+ - finops
 description: "I anticipate and forecast systems activities and needs, to guarantee service level objectives and system capacity."
 ---
 
-# Capacity Planning
+![Card for Capacity Planning.](/cards/capacity-planning.png)
+![I anticipate and forecast systems activities and needs, to guarantee service level objectives and system capacity.](/images/capacity-planning.webp)
 
-## Description
+# Description
 
 Capacity Planning is a proactive approach to anticipate and forecast future system activities and demands. It involves analyzing current system usage and trends to predict future requirements, ensuring that the necessary resources are available to meet service level objectives without over-provisioning. This entails a careful balance between availability, performance, and cost, enabling organizations to optimize their IT infrastructure to handle growth and peak loads efficiently.
 
