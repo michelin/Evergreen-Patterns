@@ -269,10 +269,13 @@
 - category: running
   image_prompt: null
   pattern_name: Embrace Failures
-  prompt: ''
+  prompt: With this pattern, we encourage teams to embrace failures and see them as opportunities to improve and learn something that they didn't know. We encourage them to do post-mortems and root cause analysis.
   short_description: I see failures as opportunities to continuously learn and improve
   status: ''
-  tags: ''
+  tags:
+   - mindset
+   - sre
+   - people
 - category: running
   image_prompt: null
   pattern_name: Observability
@@ -324,8 +327,7 @@
   image_prompt: null
   pattern_name: Up to date Inventory
   prompt: ''
-  short_description: "Tracking any type of asset that have a relationship with my\
-    \ systems is the foundation of efficient operations"
+  short_description: "Tracking any type of asset that have a relationship with my systems is the foundation of efficient operations"
   status: ''
   tags: ''
 - category: running
@@ -370,8 +372,7 @@
   image_prompt: null
   pattern_name: Progressive Roll-out
   prompt: ''
-  short_description: My systems can be deployed in small increments and enable easy
-    upgrade or roll-back
+  short_description: My systems can be deployed in small increments and enable easy upgrade or roll-back
   status: ''
   tags:
     - 'devops'
@@ -391,6 +392,6 @@
   short_description: I have automated tests which validate the most critical functionalities, enabling quick and early post change validation
   status: validated
   tags:
-    - 'testing'
-    - 'automation'
-    - 'validation'
+    - testing
+    - automation
+    - validation

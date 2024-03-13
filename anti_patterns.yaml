@@ -110,10 +110,14 @@
 - category: anti-pattern
   image_prompt: A person finger pointing at another
   pattern_name: The Blame Game
+  icon_prompt: a finger pointing at a person
   prompt: ''
   short_description: When an incident occurs, the first reflex is to find the responsible person
-  status: draft
-  tags: ''
+  tags:
+    - culture
+    - team
+    - management
+    - mindset
 - category: anti-pattern
   image_prompt: An image of someone with a large ball and chain attached to its leg, trying to work on his computer
   pattern_name: Toil Routine
@@ -125,7 +129,7 @@
   mitigation:
     - Smoke Testing
 - category: anti-pattern
-  image_prompt: null
+  image_prompt: An old server in a datacenter, under a snowfall
   pattern_name: Snowflake
   prompt: ''
   mitigations:
@@ -155,6 +159,7 @@
 - category: anti-pattern
   image_prompt: null
   pattern_name: Unmastered Systems
+  icon_prompt: a plate of spaghettis
   prompt: ''
   short_description: I don't have a complete and detailed view of the components which
     my systems rely on
@@ -180,10 +185,9 @@
   tags:
     - sustainability
     - greenit
-  mitigation:
-    - Eco Design
+
 - category: anti-pattern
-  image_prompt: ''
+  image_prompt: cobwebs in a datacenter
   pattern_name: Procrastination
   prompt: ''
   short_description: Delaying to a later time leads to negative consequences and increased stress in the long run
@@ -191,5 +195,3 @@
   tags:
     - sustainability
     - greenit
-  mitigation:
-    - Eco Design    
