@@ -3,5 +3,5 @@ ollama
 jinja2
 google-generativeai
 pyyaml
-frontmatter
 pillow
+frontmatter
