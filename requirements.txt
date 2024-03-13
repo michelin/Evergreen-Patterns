@@ -1,0 +1,7 @@
+openai
+ollama
+jinja2
+google-generativeai
+pyyaml
+pillow
+frontmatter

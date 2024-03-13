@@ -1,0 +1,397 @@
+- category: prefix
+  prompt: We have created at work descriptions of the "Evergreen patterns" that defines best practices and methodologies
+    to help teams maintain a high quality of service by building resilient, highly available, scalable and frugal software systems.
+- category: prefix
+  prompt: One of these patterns is "{{ pattern_name }} whose short description is "{{ short_description }}"".
+- category: suffix
+  prompt: 'Please create a complete description in markdown format for this pattern
+    that follows this plan : Description, Key principles, Benefits, Implementation
+    strategies and Related online resources. Add a last line that will contain 3 tags
+    separated by commas that will be used to categorize this pattern.'
+- category: architecting
+  image_prompt: A transversal view of a ship being built, showing the bulkheads
+  pattern_name: Bulkheads
+  prompt: ''
+  short_description: My system isolate functionalities to reduce the blast radius when problems occur
+  status: ''
+  tags: ''
+- category: architecting
+  image_prompt: null
+  pattern_name: Decoupling
+  prompt: With this pattern, we encourage architects to use middleware to enable asynchronous
+    data exchanges between systems, to avoid tight coupling and to enable the decoupling
+    of systems. The implementation of Event driven architecture is a good example
+    of this pattern, and Kafka is a recommended tool.
+  short_description: My systems use middleware to enable asynchronous data exchanges
+  status: ''
+  tags: ''
+- category: architecting
+  image_prompt: 2 workers shaking hands
+  pattern_name: Handshaking and Backpressure
+  prompt: ''
+  short_description: My systems collaborate with third parties to make sure they can
+    handle my workload
+  status: ''
+  tags: ''
+- category: architecting
+  image_prompt: null
+  pattern_name: Steady State
+  icon_prompt: Generate a graphic icon with simple design and a single green color on a white background and a line art style.
+    The image consists of a circle with an open end on the right side where an arrow points clockwise. Inside the circle, there are three vertical lines that have the same height.
+    This kind of icon might be used to represent concepts like cycle, refresh, update, or continuous processes.
+  prompt: ''
+  short_description: My systems operate indefinitely in well known and monitored conditions
+  status: ''
+  tags: ''
+- category: architecting
+  image_prompt: null
+  pattern_name: Defined Service Levels
+  prompt: ''
+  short_description: Business has defined expectations of my system's availability and performance
+  status: ''
+  tags:
+    - 'sre'
+- category: architecting
+  image_prompt: null
+  pattern_name: Continuous Architecture
+  prompt: ''
+  short_description: My systems' architecture is continuously re-evaluated and adapted
+    taking in account production feedback
+  status: ''
+  tags: ''
+- category: architecting
+  image_prompt: null
+  pattern_name: Reliable Data Exchange
+  prompt: ''
+  short_description: My data exchanges ensure consistency & integrity between systems
+  status: ''
+  tags: ''
+- category: architecting
+  image_prompt: null
+  pattern_name: Reliable Service Exposition
+  prompt: ''
+  short_description: My systems expose robust and resilient APIs
+  status: ''
+  tags: ''
+- category: architecting
+  image_prompt: null
+  pattern_name: Eco Design
+  prompt: ''
+  short_description: I create digital applications improving the customer experience
+    while preserving the planet
+  status: ''
+  tags: ''
+- category: architecting
+  image_prompt: null
+  pattern_name: Continuous Modernization
+  prompt: With this pattern, we encourage architects to regularly review their application
+    portfolio to identify and execute modernization and decommissioning opportunities
+    proactively.
+  short_description: I analyze my application portfolio to identify and execute modernization
+    opportunities on a regular basis
+  status: ''
+  tags: ''
+- category: architecting
+  image_prompt: null
+  pattern_name: Cloud Native Architecture
+  prompt: ''
+  short_description: My systems are designed as a sum of independent services to ensure scalability, operability and agility
+  status: ''
+  tags: ''
+- category: building
+  image_prompt: null
+  pattern_name: Accounting for Internal Failures
+  prompt: ''
+  short_description: My systems are designed to gracefully handle internal errors
+  status: ''
+  tags: ''
+- category: building
+  image_prompt: null
+  pattern_name: Circuit Breakers
+  prompt: ''
+  short_description: My systems are protected from third party failures
+  status: ''
+  tags: ''
+- category: building
+  image_prompt: null
+  pattern_name: Ephemereal Environments
+  prompt: With this pattern, we encourage build teams to leverage ephemereal environments
+    to avoid having to provision Virtual machines based test environments that are
+    costly, resource consuming (not friendly with the environment) and lack agility.
+  short_description: I create temporary and disposable development and testing environments
+  status: ''
+  tags:
+    - 'devops'
+    - 'sustainability'
+    - 'automation'
+    - 'testing'
+- category: building
+  image_prompt: null
+  pattern_name: Application Logging
+  prompt: ''
+  short_description: My systems log information necessary for troubleshooting and
+    monitoring
+  status: ''
+  tags: ''
+- category: building
+  image_prompt: null
+  pattern_name: Continuous Integration
+  prompt: ''
+  short_description: Committed changes automatically trigger the build of the entire
+    application as well as the automated tests
+  status: ''
+  tags:
+    - 'automation'
+    - 'devops'
+- category: building
+  image_prompt: A monkey randomly pulling out cables in a data center
+  pattern_name: Chaos Engineering
+  prompt: ''
+  short_description: I voluntarily inject chaos in my system to understand its behavior and learn how to recover and improve
+  status: ''
+  tags:
+    - 'testing'
+    - 'sre'
+- category: building
+  image_prompt: null
+  pattern_name: Error Categorization
+  prompt: ''
+  short_description: "My systems' logs use standard error severities agreed between the build and operations"
+  status: ''
+  tags: ''
+- category: building
+  image_prompt: null
+  pattern_name: Reporting System Health and State
+  prompt: ''
+  short_description: 'My systems are observable: Health Checks, Technical Golden Signals
+    and End User Experience (SLI)'
+  status: ''
+  tags: ''
+- category: building
+  image_prompt: null
+  pattern_name: Production Aware Testing
+  prompt: ''
+  short_description: Tests are conducted at production scale on identical infrastructure.
+    They encompass real-world user journeys.
+  status: ''
+  tags: ''
+- category: building
+  image_prompt: null
+  pattern_name: Traceability of data flows
+  prompt: ''
+  short_description: "My systems' dataflows are easy to monitor and diagnose thanks to correlation (UUIDs...)"
+  status: ''
+  tags: ''
+- category: building
+  image_prompt: null
+  pattern_name: Fail Fast
+  prompt: ''
+  short_description: Before starting a task, my systems ensure it has a chance to be fully completed
+  status: ''
+  tags: ''
+- category: building
+  image_prompt: null
+  pattern_name: Using Timeouts
+  prompt: ''
+  short_description: My systems are configured to stop before being fully overloaded
+  status: ''
+  tags: ''
+- category: building
+  image_prompt: null
+  pattern_name: Continuous Obso Housekeeping
+  prompt: With this pattern, we encourage build teams to regularly update their application
+    dependencies and runtimes and to not wait for obsolescence of their dependencies.
+    We encourage in this pattern that they regularly review their main dependencies
+    and integrate modernization efforts in their product roadmaps directly.
+  short_description: Upgrading my system's components and dependencies with latest
+    supported version is a recurrent planned activity
+  status: ''
+  tags:
+    - 'security'
+- category: building
+  image_prompt: null
+  pattern_name: Sustainable Fullstack
+  prompt: With this pattern, we encourage build teams to assess the environmental
+    impact and resource consumption of all technical components of their development
+    and runtime stack, and also encourage them to have both architecture and development
+    practices that are sustainable from an energy consumption standpoint.
+  short_description: I implement sustainable architecture and development practices
+  status: ''
+  tags:
+    - 'sustainability'
+- category: running
+  image_prompt: null
+  pattern_name: Continuous Sustainability
+  prompt: With this pattern, we encourage teams to continuously, periodically reassess
+    and reevaluate the energy consumption of their IT systems, during their complete
+    lifecycle, from the initial design all the way till the final decommissioning
+    of their system.
+  short_description: I integrate environmentally conscious principles into all aspects
+    of a system's lifecycle
+  status: ''
+  tags:
+    - 'sustainability'
+- category: running
+  image_prompt: null
+  pattern_name: Capacity Planning
+  prompt: ''
+  short_description: I anticipate and forecast systems activities and needs, to guarantee service level objectives and system capacity
+  status: ''
+  tags:
+    - 'sre'
+    - 'sustainability'    
+- category: running
+  image_prompt: null
+  pattern_name: Prod First
+  prompt: ''
+  short_description: During critical failures, teams have the power to activate all
+    relevant experts to restore production
+  status: ''
+  tags:
+    - 'organization'
+    - 'people'
+- category: running
+  image_prompt: A detective looking for clues at a crime scene in a data center
+  pattern_name: Collecting Evidence
+  prompt: ''
+  short_description: During a failure my systems retain relevant logs and data to enable both quick resolution and cold analysis
+  status: ''
+  tags:
+    - 'monitoring'
+    - 'automation'
+- category: running
+  image_prompt: null
+  pattern_name: Continuous Knowledge
+  prompt: ''
+  short_description: Sharing and capitalizing knowledge continuously across teams is a corner stone of efficient operations
+  status: ''
+  tags: ''
+- category: running
+  image_prompt: null
+  pattern_name: Embrace Failures
+  prompt: With this pattern, we encourage teams to embrace failures and see them as opportunities to improve and learn something that they didn't know. We encourage them to do post-mortems and root cause analysis.
+  short_description: I see failures as opportunities to continuously learn and improve
+  status: ''
+  tags:
+   - mindset
+   - sre
+   - people
+- category: running
+  image_prompt: null
+  pattern_name: Observability
+  prompt: ''
+  short_description: "I proactively set up my golden signals and SLIs in order to reduce time to detect situations"
+  status: ''
+  tags:
+    - 'monitoring'
+    - 'observability'
+    - 'sre'
+- category: running
+  image_prompt: null
+  pattern_name: Event Management
+  prompt: With this pattern, we encourage teams to implement the Event management
+    ITIL practice that monitors all events of the IT infrastructure, in order to react
+    as quickly as possible when situations occur.
+  short_description: My systems send notifications as soon as possible to deal with situations
+  status: ''
+  tags:
+    - 'automation'
+    - 'itil'
+    - 'monitoring'
+    - 'observability'
+- category: running
+  image_prompt: null
+  pattern_name: Self Healing
+  prompt: ''
+  short_description: My systems react automatically to an event or make users autonomous
+    to minimize request to operations
+  status: ''
+  tags:
+    - 'automation'
+- category: running
+  image_prompt: null
+  pattern_name: Smart Assistance
+  prompt: ''
+  short_description: I know my users to provide a consistent and responsive user experience
+    with appropriate channels for their work
+  status: ''
+  tags: ''
+- category: running
+  image_prompt: null
+  pattern_name: Traceability and Usage Monitoring
+  prompt: ''
+  short_description: "My systems provide data that enable the understanding of usage"
+  status: ''
+  tags: ''
+- category: running
+  image_prompt: null
+  pattern_name: Up to date Inventory
+  prompt: ''
+  short_description: "Tracking any type of asset that have a relationship with my systems is the foundation of efficient operations"
+  status: ''
+  tags: ''
+- category: running
+  image_prompt: null
+  pattern_name: Scheduled Stop and Start
+  prompt: ''
+  short_description: I start my environment only when I use it, it remains off by
+    default
+  status: ''
+  tags:
+    - 'automation'
+    - 'devops'  
+- category: releasing
+  image_prompt: null
+  pattern_name: Error Budget
+  prompt: ''
+  short_description: "Service Level Objective violations must be anticipated & trigger consequences"
+  status: ''
+  tags:
+    - 'sre'
+    - 'monitoring'
+    - 'observability' 
+- category: releasing
+  image_prompt: null
+  pattern_name: Continuous Deployment
+  prompt: ''
+  short_description: "I deploy my systems with an automation tool which guarantees\
+    \ deployment is fast and reproducible"
+  status: ''
+  tags:
+    - 'automation'
+    - 'devops'  
+- category: releasing
+  image_prompt: null
+  pattern_name: Hypercare
+  prompt: ''
+  short_description: "I make sure that all required contributors are prepared and involved during a change on my systems to ensure prompt reaction"
+  status: ''
+  tags:
+    - 'organization'
+- category: releasing
+  image_prompt: null
+  pattern_name: Progressive Roll-out
+  prompt: ''
+  short_description: My systems can be deployed in small increments and enable easy upgrade or roll-back
+  status: ''
+  tags:
+    - 'devops'
+- category: releasing
+  image_prompt: null
+  pattern_name: Immutability
+  prompt: ''
+  short_description: Each change is a complete re-provisioning of the environment, ensuring its configuration is 100% defined as code
+  status: validated
+  tags:
+    - 'automation'
+    - 'devops'  
+- category: releasing
+  image_prompt: null
+  pattern_name: Smoke Testing
+  prompt: With this pattern, we recommend that teams use an automated test to quickly validate the success of their changes
+  short_description: I have automated tests which validate the most critical functionalities, enabling quick and early post change validation
+  status: validated
+  tags:
+    - testing
+    - automation
+    - validation

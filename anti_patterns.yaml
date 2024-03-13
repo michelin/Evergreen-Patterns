@@ -1,0 +1,197 @@
+- category: prefix
+  prompt: We have created at work descriptions of "anti-patterns" that defines worst
+    practices and bad habbits when it comes to architecting, building, releasing or
+    maintaining IT systems.
+- category: prefix
+  prompt: One of these anti-pattern is "{{ pattern_name }} which is defined as "{{ short_description }}"".
+- category: suffix
+  prompt: 'Please create a description in markdown format for this anti-pattern that
+    follows this plan : Description and possible mitigations for the problem it causes.
+    Add a last line that will contain 3 tags separated by commas that will be used
+    to categorize the anti-pattern.'
+- category: anti-pattern
+  image_prompt: A domino chain reaction with 10 dominoes
+  pattern_name: Cascading Failure
+  prompt: ''
+  short_description: Failures of a system propagate to all its highly coupled third
+    parties
+  status: ''
+  tags: ''
+- category: anti-pattern
+  image_prompt: 'The big bang explosion'
+  pattern_name: Big Bang Deployment
+  prompt: ''
+  short_description: Go live of my systems is not gradual and is a one shot and very
+    risky operation
+  status: ''
+  tags: ''
+  mitigation:
+    - Progressive Roll-out
+- category: anti-pattern
+  image_prompt: 'A person playing Jenga'
+  pattern_name: Change Aversion
+  prompt: ''
+  short_description: Changing systems in production is risky so I avoid it at all
+    cost
+  status: ''
+  tags: ''
+- category: anti-pattern
+  image_prompt: 'A super hero saving the day'
+  pattern_name: Hero Problem Solving
+  prompt: ''
+  short_description: Only a few specific members of my team know how to solve the
+    issues my systems face
+  status: ''
+  tags: ''
+- category: anti-pattern
+  image_prompt: 'A cute teddy bear'
+  pattern_name: Everything works all the time!
+  prompt: ''
+  short_description: My systems only implement the happy paths with no design for
+    failure
+  status: ''
+  tags: ''
+- category: anti-pattern
+  image_prompt: null
+  pattern_name: Integration Point
+  prompt: ''
+  short_description: When a system connects with another system, it takes on board
+    failures and problems of the latter
+  status: ''
+  tags: ''
+- category: anti-pattern
+  image_prompt: 'A person with an hammer in hand, trying to smash a fly'
+  pattern_name: Overkill Response
+  prompt: ''
+  short_description: I use drastic measures that have a large impact to fix simple
+    issues
+  status: ''
+  tags: ''
+- category: anti-pattern
+  image_prompt: null
+  pattern_name: Normal Errors
+  prompt: ''
+  short_description: My systems are reporting too many errors which are either not
+    relevant or not associated with an actual problem
+  status: ''
+  tags: ''
+- category: anti-pattern
+  image_prompt: A firefighter trying to stop a fire that is burning a computer
+  pattern_name: Reactive Operations
+  prompt: ''
+  short_description: My operations are driven by incoming incidents and are not proactive
+  status: ''
+  tags: ''
+- category: anti-pattern
+  image_prompt: null
+  pattern_name: SLA Inversion
+  prompt: ''
+  short_description: The lowest system's availability is the one of all its coupled
+    dependencies
+  status: ''
+  tags: ''
+- category: anti-pattern
+  image_prompt: A person quickly running towards without seeing that there is a hazard
+    in front of them
+  pattern_name: Rushing to solution
+  prompt: ''
+  short_description: Restoring a system during an outage is the top priority but not
+    taking enough time for collecting data or analyzing
+  status: ''
+  tags: ''
+- category: anti-pattern
+  image_prompt: A snow ball becoming bigger and bigger as it goes down a hill
+  pattern_name: Snowball Effect
+  prompt: ''
+  short_description: Simple problems in my systems grow bigger over time and generate
+    unmanageable situations
+  status: ''
+  tags: ''
+- category: anti-pattern
+  image_prompt: A person finger pointing at another
+  pattern_name: The Blame Game
+  icon_prompt: a finger pointing to the right
+  prompt: ''
+  short_description: When an incident occurs, the first reflex is to find the responsible person
+  tags:
+    - culture
+    - team
+    - management
+    - mindset
+- category: anti-pattern
+  image_prompt: An image of someone with a large ball and chain attached to its leg, trying to work on his computer
+  pattern_name: Toil Routine
+  prompt: ''
+  short_description: Maintaining my systems in production requires painful and recurring manual tasks and checks
+  status: validated
+  tags:
+    - automation
+  mitigation:
+    - Smoke Testing
+- category: anti-pattern
+  image_prompt: An old server in a datacenter, under a snowfall
+  pattern_name: Snowflake
+  prompt: ''
+  mitigations:
+    - Immutability
+  short_description: My systems are the result of accumulating numerous changes over
+    time and are not reproductible
+  status: ''
+  tags: ''
+- category: anti-pattern
+  image_prompt: An highway with a lot of lanes, with cars and trucks all converging
+    to a single toll booth operated by a human, creating a massive traffic jam, after
+    the tool booth, only a single lane remains
+  pattern_name: Unbalanced Capacities
+  prompt: ''
+  short_description: The resources consumed by my system are maladjusted to the tasks
+    to be performed
+  status: ''
+  tags: ''
+- category: anti-pattern
+  image_prompt: null
+  pattern_name: Untracked Operations
+  prompt: ''
+  short_description: Some operations done on my production systems are not tracked
+    or auditable
+  status: ''
+  tags: ''
+- category: anti-pattern
+  image_prompt: null
+  pattern_name: Unmastered Systems
+  icon_prompt: a plate of spaghettis
+  prompt: ''
+  short_description: I don't have a complete and detailed view of the components which
+    my systems rely on
+  status: ''
+  tags: ''
+  mitigation:
+    - Up to date Inventory
+- category: anti-pattern
+  image_prompt: A cat walking on a keyboard, typing random text in a business web application
+  pattern_name: Unexpected Usage
+  prompt: ''
+  short_description: You never know how users will use a system
+  status: ''
+  tags: ''
+  mitigation:
+    - Chaos Engineering
+- category: anti-pattern
+  image_prompt: ''
+  pattern_name: Infinite Resources
+  prompt: ''
+  short_description: I use IT/Digital diregarding the finite nature of our environment and its overexploitation
+  status: 'reviewed'
+  tags:
+    - sustainability
+    - greenit
+
+- category: anti-pattern
+  image_prompt: cobwebs in a datacenter
+  pattern_name: Procrastination
+  prompt: ''
+  short_description: Delaying to a later time leads to negative consequences and increased stress in the long run
+  status: 'reviewed'
+  tags:
+    - sustainability
+    - greenit
