@@ -1,0 +1,8 @@
+integration
+sre
+day2 
+people
+mindset
+resilience
+architecture
+observability
