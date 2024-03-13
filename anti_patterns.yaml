@@ -110,7 +110,7 @@
 - category: anti-pattern
   image_prompt: A person finger pointing at another
   pattern_name: The Blame Game
-  icon_prompt: a finger pointing at a person
+  icon_prompt: a finger pointing to the right
   prompt: ''
   short_description: When an incident occurs, the first reflex is to find the responsible person
   tags:
