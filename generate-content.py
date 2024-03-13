@@ -8,12 +8,9 @@ import yaml
 from datetime import datetime
 from openai import OpenAI
 import frontmatter
+import generator
 
-# set the logging level
-logging.basicConfig(level=logging.INFO)
 
-# create a jinja2 environment that loads templates from the current directory
-env = Environment(loader=FileSystemLoader('.'))
 client = OpenAI()
 
 model_name='llama2:13b'
@@ -36,16 +33,6 @@ def generate_text_openai(full_prompt):
     #last_line = content.trim().split('\n')[-1]
 
     return response.choices[0].message.content, datetime.fromtimestamp(response.created).astimezone().isoformat() 
-
-def generate_text_ollama(full_prompt):
-  messages=[
-    {
-      'role': 'user',
-      'content': full_prompt,
-    },
-  ]
-  response = ollama.chat(model=model_name, messages=messages)
-  return response['message']['content'], response['created_at']
 
 def generate_pattern(prompt, prefix, suffix, model_name, responses):
 
@@ -91,8 +78,8 @@ def generate_pattern(prompt, prefix, suffix, model_name, responses):
 
   logging.info(f"Generating content for : {prompt['pattern_name']} to {output_file_name}")
 
-  # response_content, creation_date = generate_text_ollama(full_prompt)
-  response_content, creation_date = generate_text_openai(full_prompt)
+  response_content, creation_date = generator.generate_text_ollama(model_name, full_prompt)
+  # response_content, creation_date = generate_text_openai(full_prompt)
 
   prompt['page_contents'] = response_content
   # inject generation date in prompt
