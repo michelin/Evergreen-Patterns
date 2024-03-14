@@ -1,15 +1,15 @@
-- category: prefix
+- family: prefix
   prompt: We have created at work descriptions of "anti-patterns" that defines worst
     practices and bad habbits when it comes to architecting, building, releasing or
     maintaining IT systems.
-- category: prefix
+- family: prefix
   prompt: One of these anti-pattern is "{{ pattern_name }} which is defined as "{{ short_description }}"".
-- category: suffix
+- family: suffix
   prompt: 'Please create a description in markdown format for this anti-pattern that
     follows this plan : Description and possible mitigations for the problem it causes.
     Add a last line that will contain 3 tags separated by commas that will be used
     to categorize the anti-pattern.'
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: A domino chain reaction with 10 dominoes
   pattern_name: Cascading Failure
   prompt: ''
@@ -17,7 +17,7 @@
     parties
   status: ''
   tags: ''
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: 'The big bang explosion'
   pattern_name: Big Bang Deployment
   prompt: ''
@@ -27,7 +27,7 @@
   tags: ''
   mitigation:
     - Progressive Roll-out
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: 'A person playing Jenga'
   pattern_name: Change Aversion
   prompt: ''
@@ -35,7 +35,7 @@
     cost
   status: ''
   tags: ''
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: 'A super hero saving the day'
   pattern_name: Hero Problem Solving
   prompt: ''
@@ -43,7 +43,7 @@
     issues my systems face
   status: ''
   tags: ''
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: 'A cute teddy bear'
   pattern_name: Everything works all the time!
   prompt: ''
@@ -51,7 +51,7 @@
     failure
   status: ''
   tags: ''
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: null
   pattern_name: Integration Point
   prompt: ''
@@ -59,7 +59,7 @@
     failures and problems of the latter
   status: ''
   tags: ''
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: 'A person with an hammer in hand, trying to smash a fly'
   pattern_name: Overkill Response
   prompt: ''
@@ -67,7 +67,7 @@
     issues
   status: ''
   tags: ''
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: null
   pattern_name: Normal Errors
   prompt: ''
@@ -75,14 +75,14 @@
     relevant or not associated with an actual problem
   status: ''
   tags: ''
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: A firefighter trying to stop a fire that is burning a computer
   pattern_name: Reactive Operations
   prompt: ''
   short_description: My operations are driven by incoming incidents and are not proactive
   status: ''
   tags: ''
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: null
   pattern_name: SLA Inversion
   prompt: ''
@@ -90,7 +90,7 @@
     dependencies
   status: ''
   tags: ''
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: A person quickly running towards without seeing that there is a hazard
     in front of them
   pattern_name: Rushing to solution
@@ -99,7 +99,7 @@
     taking enough time for collecting data or analyzing
   status: ''
   tags: ''
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: A snow ball becoming bigger and bigger as it goes down a hill
   pattern_name: Snowball Effect
   prompt: ''
@@ -107,7 +107,7 @@
     unmanageable situations
   status: ''
   tags: ''
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: A person finger pointing at another
   pattern_name: The Blame Game
   icon_prompt: a finger pointing to the right
@@ -118,7 +118,7 @@
     - team
     - management
     - mindset
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: An image of someone with a large ball and chain attached to its leg, trying to work on his computer
   pattern_name: Toil Routine
   prompt: ''
@@ -128,7 +128,7 @@
     - automation
   mitigation:
     - Smoke Testing
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: An old server in a datacenter, under a snowfall
   pattern_name: Snowflake
   prompt: ''
@@ -138,7 +138,7 @@
     time and are not reproductible
   status: ''
   tags: ''
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: An highway with a lot of lanes, with cars and trucks all converging
     to a single toll booth operated by a human, creating a massive traffic jam, after
     the tool booth, only a single lane remains
@@ -148,7 +148,7 @@
     to be performed
   status: ''
   tags: ''
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: null
   pattern_name: Untracked Operations
   prompt: ''
@@ -156,7 +156,7 @@
     or auditable
   status: ''
   tags: ''
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: null
   pattern_name: Unmastered Systems
   icon_prompt: a plate of spaghettis
@@ -167,7 +167,7 @@
   tags: ''
   mitigation:
     - Up to date Inventory
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: A cat walking on a keyboard, typing random text in a business web application
   pattern_name: Unexpected Usage
   prompt: ''
@@ -176,7 +176,7 @@
   tags: ''
   mitigation:
     - Chaos Engineering
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: ''
   pattern_name: Infinite Resources
   prompt: ''
@@ -186,7 +186,7 @@
     - sustainability
     - greenit
 
-- category: anti-pattern
+- family: anti-pattern
   image_prompt: cobwebs in a datacenter
   pattern_name: Procrastination
   prompt: ''

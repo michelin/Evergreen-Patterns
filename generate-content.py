@@ -48,7 +48,7 @@ def generate_pattern(prompt, prefix, suffix, model_name, responses):
   pattern_slug = re.sub(rf'[!]', '', pattern_slug)
 
   prompt['pattern_slug'] = pattern_slug
-  output_file_name = os.path.join('content', prompt['category'], pattern_slug + '.md')
+  output_file_name = os.path.join('content', prompt['family'], pattern_slug + '.md')
 
   icon_path = f"static/images/icons/{pattern_slug}.png"
   # create the directory if it doesn't exist
@@ -95,7 +95,7 @@ def generate_pattern(prompt, prefix, suffix, model_name, responses):
   file_template = env.get_template('page-template.md')
   filecontents = file_template.render(prompt)
 
-  responses.append({'category': prompt['category'], 'model':model_name, 'prompt': full_prompt, 'contents': filecontents})
+  responses.append({'family': prompt['family'], 'model':model_name, 'prompt': full_prompt, 'contents': filecontents})
 
   # create the directory if it doesn't exist
   os.makedirs(os.path.dirname(output_file_name), exist_ok=True)
@@ -112,12 +112,12 @@ def generate_content(file_name, model_name):
     prompts = yaml.load(yamlfile, Loader=yaml.FullLoader)
 
   # loop through the prompts and get the responses
-  prefix = "\n".join([prompt['prompt'] for prompt in prompts if prompt['category'] == 'prefix'])
-  suffix = "\n".join([prompt['prompt'] for prompt in prompts if prompt['category'] == 'suffix'])
+  prefix = "\n".join([prompt['prompt'] for prompt in prompts if prompt['family'] == 'prefix'])
+  suffix = "\n".join([prompt['prompt'] for prompt in prompts if prompt['family'] == 'suffix'])
 
   responses = []
   for prompt in prompts:
-    if prompt['category'] == 'prefix' or prompt['category'] == 'suffix':
+    if prompt['family'] == 'prefix' or prompt['family'] == 'suffix':
       continue
 
     generate_pattern(prompt, prefix, suffix, model_name, responses)

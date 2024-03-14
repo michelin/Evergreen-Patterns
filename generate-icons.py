@@ -110,7 +110,7 @@ def generate_icons(yml_file):
     with open(yml_file, newline='') as yamlfile:
         patterns = yaml.load(yamlfile, Loader=yaml.FullLoader)
         for pattern in patterns:
-            if pattern['category'] == 'prefix' or pattern['category'] == 'suffix':
+            if pattern['family'] == 'prefix' or pattern['family'] == 'suffix':
                 continue
 
             pattern_slug = pattern['pattern_name'].lower().replace(' ', '-')
