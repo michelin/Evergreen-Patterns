@@ -52,7 +52,7 @@ def generate_cards(yml_file):
     with open(yml_file, newline='') as yamlfile:
         cards = yaml.load(yamlfile, Loader=yaml.FullLoader)
         for card in cards:
-            if card['category'] == 'prefix' or card['category'] == 'suffix':
+            if card['family'] == 'prefix' or card['family'] == 'suffix':
                 continue
 
             pattern_slug = card['pattern_name'].lower().replace(' ', '-')
@@ -62,7 +62,7 @@ def generate_cards(yml_file):
             # create folder if needed
             os.makedirs(os.path.dirname(card_file), exist_ok=True)
 
-            color = colors[card['category']]
+            color = colors[card['family']]
 
             icon_file = f"static/images/icons/{pattern_slug}.png"
             if not os.path.exists(icon_file):
@@ -96,7 +96,7 @@ def generate_cards(yml_file):
             draw.rectangle([0, 650, card_size[0], card_size[1]], fill=color)
 
             # draw text on card
-            draw_text_left_align(draw, family_names[card['category']], color, 170, 70, michelin_font)
+            draw_text_left_align(draw, family_names[card['family']], color, 170, 70, michelin_font)
             y = draw_text(draw, card['pattern_name'], white, x_center, 700, michelin_font, "center")
 
             # draw a white line to separate the title from the description

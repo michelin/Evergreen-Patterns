@@ -19,15 +19,15 @@ model_name='qwen:14b'
 patterns = []
 with open('patterns.yaml', newline='') as yamlfile:
   patterns = yaml.load(yamlfile, Loader=yaml.FullLoader)
-  # remove patterns with a category of prefix or suffix
-  patterns = [pattern for pattern in patterns if pattern['category'] != 'prefix' and pattern['category'] != 'suffix']
+  # remove patterns with a family of prefix or suffix
+  patterns = [pattern for pattern in patterns if pattern['family'] != 'prefix' and pattern['family'] != 'suffix']
 
 # load the antipatterns file
 antipatterns = []
 with open('anti_patterns.yaml', newline='') as yamlfile:
   antipatterns = yaml.load(yamlfile, Loader=yaml.FullLoader)
-  # remove antipatterns with a category of prefix or suffix
-  antipatterns = [pattern for pattern in antipatterns if pattern['category'] != 'prefix' and pattern['category'] != 'suffix']
+  # remove antipatterns with a family of prefix or suffix
+  antipatterns = [pattern for pattern in antipatterns if pattern['family'] != 'prefix' and pattern['family'] != 'suffix']
 
 # generate the prompt
 full_prompt = '''

@@ -1,21 +1,21 @@
-- category: prefix
+- family: prefix
   prompt: We have created at work descriptions of the "Evergreen patterns" that defines best practices and methodologies
     to help teams maintain a high quality of service by building resilient, highly available, scalable and frugal software systems.
-- category: prefix
+- family: prefix
   prompt: One of these patterns is "{{ pattern_name }} whose short description is "{{ short_description }}"".
-- category: suffix
+- family: suffix
   prompt: 'Please create a complete description in markdown format for this pattern
     that follows this plan : Description, Key principles, Benefits, Implementation
     strategies and Related online resources. Add a last line that will contain 3 tags
     separated by commas that will be used to categorize this pattern.'
-- category: architecting
+- family: architecting
   image_prompt: A transversal view of a ship being built, showing the bulkheads
   pattern_name: Bulkheads
   prompt: ''
   short_description: My system isolate functionalities to reduce the blast radius when problems occur
   status: ''
   tags: ''
-- category: architecting
+- family: architecting
   image_prompt: null
   pattern_name: Decoupling
   prompt: With this pattern, we encourage architects to use middleware to enable asynchronous
@@ -25,7 +25,7 @@
   short_description: My systems use middleware to enable asynchronous data exchanges
   status: ''
   tags: ''
-- category: architecting
+- family: architecting
   image_prompt: 2 workers shaking hands
   pattern_name: Handshaking and Backpressure
   prompt: ''
@@ -33,7 +33,7 @@
     handle my workload
   status: ''
   tags: ''
-- category: architecting
+- family: architecting
   image_prompt: null
   pattern_name: Steady State
   icon_prompt: Generate a graphic icon with simple design and a single green color on a white background and a line art style.
@@ -43,7 +43,7 @@
   short_description: My systems operate indefinitely in well known and monitored conditions
   status: ''
   tags: ''
-- category: architecting
+- family: architecting
   image_prompt: null
   pattern_name: Defined Service Levels
   prompt: ''
@@ -51,7 +51,7 @@
   status: ''
   tags:
     - 'sre'
-- category: architecting
+- family: architecting
   image_prompt: null
   pattern_name: Continuous Architecture
   prompt: ''
@@ -59,21 +59,21 @@
     taking in account production feedback
   status: ''
   tags: ''
-- category: architecting
+- family: architecting
   image_prompt: null
   pattern_name: Reliable Data Exchange
   prompt: ''
   short_description: My data exchanges ensure consistency & integrity between systems
   status: ''
   tags: ''
-- category: architecting
+- family: architecting
   image_prompt: null
   pattern_name: Reliable Service Exposition
   prompt: ''
   short_description: My systems expose robust and resilient APIs
   status: ''
   tags: ''
-- category: architecting
+- family: architecting
   image_prompt: null
   pattern_name: Eco Design
   prompt: ''
@@ -81,7 +81,7 @@
     while preserving the planet
   status: ''
   tags: ''
-- category: architecting
+- family: architecting
   image_prompt: null
   pattern_name: Continuous Modernization
   prompt: With this pattern, we encourage architects to regularly review their application
@@ -91,28 +91,28 @@
     opportunities on a regular basis
   status: ''
   tags: ''
-- category: architecting
+- family: architecting
   image_prompt: null
   pattern_name: Cloud Native Architecture
   prompt: ''
   short_description: My systems are designed as a sum of independent services to ensure scalability, operability and agility
   status: ''
   tags: ''
-- category: building
+- family: building
   image_prompt: null
   pattern_name: Accounting for Internal Failures
   prompt: ''
   short_description: My systems are designed to gracefully handle internal errors
   status: ''
   tags: ''
-- category: building
+- family: building
   image_prompt: null
   pattern_name: Circuit Breakers
   prompt: ''
   short_description: My systems are protected from third party failures
   status: ''
   tags: ''
-- category: building
+- family: building
   image_prompt: null
   pattern_name: Ephemereal Environments
   prompt: With this pattern, we encourage build teams to leverage ephemereal environments
@@ -125,7 +125,7 @@
     - 'sustainability'
     - 'automation'
     - 'testing'
-- category: building
+- family: building
   image_prompt: null
   pattern_name: Application Logging
   prompt: ''
@@ -133,7 +133,7 @@
     monitoring
   status: ''
   tags: ''
-- category: building
+- family: building
   image_prompt: null
   pattern_name: Continuous Integration
   prompt: ''
@@ -143,7 +143,7 @@
   tags:
     - 'automation'
     - 'devops'
-- category: building
+- family: building
   image_prompt: A monkey randomly pulling out cables in a data center
   pattern_name: Chaos Engineering
   prompt: ''
@@ -152,14 +152,14 @@
   tags:
     - 'testing'
     - 'sre'
-- category: building
+- family: building
   image_prompt: null
   pattern_name: Error Categorization
   prompt: ''
   short_description: "My systems' logs use standard error severities agreed between the build and operations"
   status: ''
   tags: ''
-- category: building
+- family: building
   image_prompt: null
   pattern_name: Reporting System Health and State
   prompt: ''
@@ -167,7 +167,7 @@
     and End User Experience (SLI)'
   status: ''
   tags: ''
-- category: building
+- family: building
   image_prompt: null
   pattern_name: Production Aware Testing
   prompt: ''
@@ -175,28 +175,28 @@
     They encompass real-world user journeys.
   status: ''
   tags: ''
-- category: building
+- family: building
   image_prompt: null
   pattern_name: Traceability of data flows
   prompt: ''
   short_description: "My systems' dataflows are easy to monitor and diagnose thanks to correlation (UUIDs...)"
   status: ''
   tags: ''
-- category: building
+- family: building
   image_prompt: null
   pattern_name: Fail Fast
   prompt: ''
   short_description: Before starting a task, my systems ensure it has a chance to be fully completed
   status: ''
   tags: ''
-- category: building
+- family: building
   image_prompt: null
   pattern_name: Using Timeouts
   prompt: ''
   short_description: My systems are configured to stop before being fully overloaded
   status: ''
   tags: ''
-- category: building
+- family: building
   image_prompt: null
   pattern_name: Continuous Obso Housekeeping
   prompt: With this pattern, we encourage build teams to regularly update their application
@@ -208,7 +208,7 @@
   status: ''
   tags:
     - 'security'
-- category: building
+- family: building
   image_prompt: null
   pattern_name: Sustainable Fullstack
   prompt: With this pattern, we encourage build teams to assess the environmental
@@ -219,7 +219,7 @@
   status: ''
   tags:
     - 'sustainability'
-- category: running
+- family: running
   image_prompt: null
   pattern_name: Continuous Sustainability
   prompt: With this pattern, we encourage teams to continuously, periodically reassess
@@ -231,7 +231,7 @@
   status: ''
   tags:
     - 'sustainability'
-- category: running
+- family: running
   image_prompt: null
   pattern_name: Capacity Planning
   prompt: ''
@@ -240,7 +240,7 @@
   tags:
     - 'sre'
     - 'sustainability'    
-- category: running
+- family: running
   image_prompt: null
   pattern_name: Prod First
   prompt: ''
@@ -250,7 +250,7 @@
   tags:
     - 'organization'
     - 'people'
-- category: running
+- family: running
   image_prompt: A detective looking for clues at a crime scene in a data center
   pattern_name: Collecting Evidence
   prompt: ''
@@ -259,14 +259,14 @@
   tags:
     - 'monitoring'
     - 'automation'
-- category: running
+- family: running
   image_prompt: null
   pattern_name: Continuous Knowledge
   prompt: ''
   short_description: Sharing and capitalizing knowledge continuously across teams is a corner stone of efficient operations
   status: ''
   tags: ''
-- category: running
+- family: running
   image_prompt: null
   pattern_name: Embrace Failures
   prompt: With this pattern, we encourage teams to embrace failures and see them as opportunities to improve and learn something that they didn't know. We encourage them to do post-mortems and root cause analysis.
@@ -276,7 +276,7 @@
    - mindset
    - sre
    - people
-- category: running
+- family: running
   image_prompt: null
   pattern_name: Observability
   prompt: ''
@@ -286,7 +286,7 @@
     - 'monitoring'
     - 'observability'
     - 'sre'
-- category: running
+- family: running
   image_prompt: null
   pattern_name: Event Management
   prompt: With this pattern, we encourage teams to implement the Event management
@@ -299,7 +299,7 @@
     - 'itil'
     - 'monitoring'
     - 'observability'
-- category: running
+- family: running
   image_prompt: null
   pattern_name: Self Healing
   prompt: ''
@@ -308,7 +308,7 @@
   status: ''
   tags:
     - 'automation'
-- category: running
+- family: running
   image_prompt: null
   pattern_name: Smart Assistance
   prompt: ''
@@ -316,21 +316,21 @@
     with appropriate channels for their work
   status: ''
   tags: ''
-- category: running
+- family: running
   image_prompt: null
   pattern_name: Traceability and Usage Monitoring
   prompt: ''
   short_description: "My systems provide data that enable the understanding of usage"
   status: ''
   tags: ''
-- category: running
+- family: running
   image_prompt: null
   pattern_name: Up to date Inventory
   prompt: ''
   short_description: "Tracking any type of asset that have a relationship with my systems is the foundation of efficient operations"
   status: ''
   tags: ''
-- category: running
+- family: running
   image_prompt: null
   pattern_name: Scheduled Stop and Start
   prompt: ''
@@ -340,7 +340,7 @@
   tags:
     - 'automation'
     - 'devops'  
-- category: releasing
+- family: releasing
   image_prompt: null
   pattern_name: Error Budget
   prompt: ''
@@ -350,7 +350,7 @@
     - 'sre'
     - 'monitoring'
     - 'observability' 
-- category: releasing
+- family: releasing
   image_prompt: null
   pattern_name: Continuous Deployment
   prompt: ''
@@ -360,7 +360,7 @@
   tags:
     - 'automation'
     - 'devops'  
-- category: releasing
+- family: releasing
   image_prompt: null
   pattern_name: Hypercare
   prompt: ''
@@ -368,7 +368,7 @@
   status: ''
   tags:
     - 'organization'
-- category: releasing
+- family: releasing
   image_prompt: null
   pattern_name: Progressive Roll-out
   prompt: ''
@@ -376,7 +376,7 @@
   status: ''
   tags:
     - 'devops'
-- category: releasing
+- family: releasing
   image_prompt: null
   pattern_name: Immutability
   prompt: ''
@@ -385,7 +385,7 @@
   tags:
     - 'automation'
     - 'devops'  
-- category: releasing
+- family: releasing
   image_prompt: null
   pattern_name: Smoke Testing
   prompt: With this pattern, we recommend that teams use an automated test to quickly validate the success of their changes

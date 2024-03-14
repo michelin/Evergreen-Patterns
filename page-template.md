@@ -5,7 +5,7 @@ draft: false
 status: {{ status }}
 model: {{ model }}
 categories: 
- - {{ category }}
+ - {{ family }}
 tags: 
 {% for tag in tags %}
  - {{ tag }} 
