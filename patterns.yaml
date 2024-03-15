@@ -24,7 +24,8 @@
     of this pattern, and Kafka is a recommended tool.
   short_description: My systems use middleware to enable asynchronous data exchanges
   status: ''
-  tags: ''
+  tags:
+    - integration
 - family: architecting
   image_prompt: 2 workers shaking hands
   pattern_name: Handshaking and Backpressure
@@ -32,7 +33,8 @@
   short_description: My systems collaborate with third parties to make sure they can
     handle my workload
   status: ''
-  tags: ''
+  tags:
+    - integration
 - family: architecting
   image_prompt: null
   pattern_name: Steady State
@@ -42,7 +44,8 @@
   prompt: ''
   short_description: My systems operate indefinitely in well known and monitored conditions
   status: ''
-  tags: ''
+  tags:
+    - observability
 - family: architecting
   image_prompt: null
   pattern_name: Defined Service Levels
@@ -50,7 +53,8 @@
   short_description: Business has defined expectations of my system's availability and performance
   status: ''
   tags:
-    - 'sre'
+    - sre
+    - observability
 - family: architecting
   image_prompt: null
   pattern_name: Continuous Architecture
@@ -58,21 +62,26 @@
   short_description: My systems' architecture is continuously re-evaluated and adapted
     taking in account production feedback
   status: ''
-  tags: ''
+  tags:
+    - organization
 - family: architecting
   image_prompt: null
   pattern_name: Reliable Data Exchange
   prompt: ''
   short_description: My data exchanges ensure consistency & integrity between systems
   status: ''
-  tags: ''
+  tags:
+    - integration
+    - observability
 - family: architecting
   image_prompt: null
   pattern_name: Reliable Service Exposition
   prompt: ''
   short_description: My systems expose robust and resilient APIs
   status: ''
-  tags: ''
+  tags:
+    - integration
+    - observability  
 - family: architecting
   image_prompt: null
   pattern_name: Eco Design
@@ -80,7 +89,8 @@
   short_description: I create digital applications improving the customer experience
     while preserving the planet
   status: ''
-  tags: ''
+  tags:
+    - green-it
 - family: architecting
   image_prompt: null
   pattern_name: Continuous Modernization
@@ -97,21 +107,25 @@
   prompt: ''
   short_description: My systems are designed as a sum of independent services to ensure scalability, operability and agility
   status: ''
-  tags: ''
+  tags:
+    - resilience
 - family: building
   image_prompt: null
   pattern_name: Accounting for Internal Failures
   prompt: ''
   short_description: My systems are designed to gracefully handle internal errors
   status: ''
-  tags: ''
+  tags:
+    - resilience
 - family: building
   image_prompt: null
   pattern_name: Circuit Breakers
   prompt: ''
   short_description: My systems are protected from third party failures
   status: ''
-  tags: ''
+  tags:
+    - resilience
+    - integration
 - family: building
   image_prompt: null
   pattern_name: Ephemereal Environments
@@ -121,10 +135,10 @@
   short_description: I create temporary and disposable development and testing environments
   status: ''
   tags:
-    - 'devops'
-    - 'sustainability'
-    - 'automation'
-    - 'testing'
+    - devops
+    - green-it
+    - automation
+    - test
 - family: building
   image_prompt: null
   pattern_name: Application Logging
@@ -132,17 +146,17 @@
   short_description: My systems log information necessary for troubleshooting and
     monitoring
   status: ''
-  tags: ''
+  tags:
+    - observability
 - family: building
   image_prompt: null
   pattern_name: Continuous Integration
   prompt: ''
-  short_description: Committed changes automatically trigger the build of the entire
-    application as well as the automated tests
+  short_description: Committed changes automatically trigger the build of the entire application as well as the automated tests
   status: ''
   tags:
-    - 'automation'
-    - 'devops'
+    - automation   
+    - devops
 - family: building
   image_prompt: A monkey randomly pulling out cables in a data center
   pattern_name: Chaos Engineering
@@ -150,15 +164,16 @@
   short_description: I voluntarily inject chaos in my system to understand its behavior and learn how to recover and improve
   status: ''
   tags:
-    - 'testing'
-    - 'sre'
+    - test
+    - sre
 - family: building
   image_prompt: null
   pattern_name: Error Categorization
   prompt: ''
   short_description: "My systems' logs use standard error severities agreed between the build and operations"
   status: ''
-  tags: ''
+  tags:
+    - observability
 - family: building
   image_prompt: null
   pattern_name: Reporting System Health and State
@@ -174,7 +189,8 @@
   short_description: Tests are conducted at production scale on identical infrastructure.
     They encompass real-world user journeys.
   status: ''
-  tags: ''
+  tags:
+    - test
 - family: building
   image_prompt: null
   pattern_name: Traceability of data flows
@@ -338,8 +354,10 @@
     default
   status: ''
   tags:
-    - 'automation'
-    - 'devops'  
+    - automation
+    - devops
+    - green-it
+    - finops
 - family: releasing
   image_prompt: null
   pattern_name: Error Budget
@@ -347,19 +365,17 @@
   short_description: "Service Level Objective violations must be anticipated & trigger consequences"
   status: ''
   tags:
-    - 'sre'
-    - 'monitoring'
-    - 'observability' 
+    - sre
+    - observability
 - family: releasing
   image_prompt: null
   pattern_name: Continuous Deployment
   prompt: ''
-  short_description: "I deploy my systems with an automation tool which guarantees\
-    \ deployment is fast and reproducible"
+  short_description: I deploy my systems automatically guaranteeing fast and reproductible deployments
   status: ''
   tags:
-    - 'automation'
-    - 'devops'  
+    - automation
+    - devops  
 - family: releasing
   image_prompt: null
   pattern_name: Hypercare
@@ -367,7 +383,7 @@
   short_description: "I make sure that all required contributors are prepared and involved during a change on my systems to ensure prompt reaction"
   status: ''
   tags:
-    - 'organization'
+    - organization
 - family: releasing
   image_prompt: null
   pattern_name: Progressive Roll-out
@@ -383,8 +399,8 @@
   short_description: Each change is a complete re-provisioning of the environment, ensuring its configuration is 100% defined as code
   status: validated
   tags:
-    - 'automation'
-    - 'devops'  
+    - automation
+    - devops
 - family: releasing
   image_prompt: null
   pattern_name: Smoke Testing
