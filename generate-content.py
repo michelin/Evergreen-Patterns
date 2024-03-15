@@ -68,7 +68,7 @@ def generate_pattern(prompt, prefix, suffix, model_name):
   if not os.path.exists(image_path):
     if prompt['image_prompt']:
       # generate the image
-      generator.generate_image(prompt['image_prompt'], image_path)
+      generator.generate_image_comfy(prompt['image_prompt'], 'text, watermark', image_path)
     else:
       logging.error(f"Image not found for {prompt['pattern_name']} and image_prompt was not set.")
   prompt['image'] = f"images/{pattern_slug}.png"

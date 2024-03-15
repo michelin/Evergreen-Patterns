@@ -2,6 +2,8 @@ import ollama
 import logging
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 import stablediff
+from urllib import request, parse
+import json
 
 # set the logging level
 logging.basicConfig(level=logging.INFO)
@@ -19,7 +21,23 @@ def generate_text_ollama(model_name, full_prompt):
   response = ollama.chat(model=model_name, messages=messages)
   return response['message']['content'], response['created_at']
 
-def generate_image(prompt, negative_prompt, icon_file):
+def generate_image_comfy(prompt, negative_prompt, target_file):
+  context = {
+    "prompt": prompt,
+    "negative_prompt": negative_prompt,
+  }
+  workflow = render_template_from_file('comfy-workflow.json.j2', context=context)
+  # send the workflow to the comfy server
+  p = {"prompt": workflow}
+  data = json.dumps(p).encode('utf-8')
+  # save the workflow to a json file for debugging
+  with open('comfy-workflow-debug.json', 'w', newline='') as jsonfile:
+    # write the json response to the file
+    jsonfile.write(data.decode('utf-8'))
+  req =  request.Request("http://127.0.0.1:8188/prompt", data=data)
+  request.urlopen(req)
+
+def generate_image_stablediff(prompt, negative_prompt, target_file):
 
     payload = {
         "prompt": prompt,  # extra networks also in prompts
@@ -96,11 +114,11 @@ def generate_image(prompt, negative_prompt, icon_file):
         # "hr_scale": 2,
         # "denoising_strength": 0.5,
         # "styles": ['style 1', 'style 2'],
-        # "override_settings": {
+        "override_settings": {
         #     'sd_model_checkpoint': "sd_xl_base_1.0",  # this can use to switch sd model
-        # },
+        },
     }
-    stablediff.call_txt2img_api(icon_file, **payload)    
+    stablediff.call_txt2img_api(target_file, **payload)    
 
 def render_template_from_string(template_str, context):
   template = env.from_string(template_str)

@@ -15,7 +15,7 @@ def generate_icon(text, icon_file):
         Generate a monochrome line art icon with thick lines and a minimalist and modern aesthetic, black on a white background. No shading.
         It represents a {text}.
     """
-    generator.generate_image(full_prompt, "shading complex", icon_file)  
+    generator.generate_image_stablediff(full_prompt, "shading complex", icon_file)  
 
 def get_image_bounds(img):
     img = img.convert('L')

@@ -1,4 +1,5 @@
 integration
+test
 sre
 day2 
 people
@@ -6,3 +7,6 @@ mindset
 resilience
 architecture
 observability
+automation
+devops
+organization
