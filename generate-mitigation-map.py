@@ -5,6 +5,8 @@ import logging
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 import json
 import yaml
+import data
+import generator
 
 # set the logging level
 logging.basicConfig(level=logging.INFO)
@@ -14,20 +16,6 @@ env = Environment(loader=FileSystemLoader('.'))
 
 #model_name='llama2:13b'
 model_name='qwen:14b'
-
-# load the patterns file
-patterns = []
-with open('patterns.yaml', newline='') as yamlfile:
-  patterns = yaml.load(yamlfile, Loader=yaml.FullLoader)
-  # remove patterns with a family of prefix or suffix
-  patterns = [pattern for pattern in patterns if pattern['family'] != 'prefix' and pattern['family'] != 'suffix']
-
-# load the antipatterns file
-antipatterns = []
-with open('anti_patterns.yaml', newline='') as yamlfile:
-  antipatterns = yaml.load(yamlfile, Loader=yaml.FullLoader)
-  # remove antipatterns with a family of prefix or suffix
-  antipatterns = [pattern for pattern in antipatterns if pattern['family'] != 'prefix' and pattern['family'] != 'suffix']
 
 # generate the prompt
 full_prompt = '''
@@ -49,6 +37,9 @@ Also for each association, please explain briefly why this pattern can be used t
 '''
 
 template = env.from_string(full_prompt)
-full_prompt = template.render(patterns=patterns, antipatterns=antipatterns)
+full_prompt = template.render(patterns=data.patterns, antipatterns=data.anti_patterns)
 
 logging.info(full_prompt)
+
+response_content, creation_date = generator.generate_text_ollama(model_name, full_prompt)
+logging.info(response_content)

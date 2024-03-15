@@ -2,20 +2,20 @@ import os
 import re
 import ollama
 import logging
-from jinja2 import Environment, FileSystemLoader, select_autoescape
 import json
 import yaml
 from datetime import datetime
 from openai import OpenAI
 import frontmatter
 import generator
-
-
-client = OpenAI()
+import data
 
 model_name='llama2:13b'
 #model_name='qwen:14b'
 #model_name='gemma:7b'
+
+if 'OPENAI_API_KEY' in os.environ:
+  client = OpenAI()
 
 def generate_text_openai(full_prompt):
     model_name = 'gpt-4-turbo-preview'
@@ -28,25 +28,30 @@ def generate_text_openai(full_prompt):
     )
 
     content = response.choices[0].message.content
+    creation_date = datetime.fromtimestamp(response.created).astimezone().isoformat()
+
+    # save the response to a json file
+    # create the directory if it doesn't exist
+    os.makedirs('openai', exist_ok=True)
+    with open(f'openai/openai-response-{creation_date}.json', 'w', newline='') as jsonfile:
+        # write the json response to the file
+        jsonfile.write(json.dumps(response, indent=4))
 
     # extract last line from the content
     #last_line = content.trim().split('\n')[-1]
 
-    return response.choices[0].message.content, datetime.fromtimestamp(response.created).astimezone().isoformat() 
+    return content, creation_date
 
-def generate_pattern(prompt, prefix, suffix, model_name, responses):
+def generate_pattern(prompt, prefix, suffix, model_name):
 
   # add trailing dot to the short description if it is missing
   if prompt['short_description'][-1] != '.': prompt['short_description'] += '.'
 
   full_prompt = prefix + "\n" + prompt['prompt'] + "\n" + suffix
   # replace the pattern_name in the prompt with the actual pattern name
-  template = env.from_string(full_prompt)
-  full_prompt = template.render(prompt)
+  full_prompt = generator.render_template_from_string(full_prompt, prompt)
 
-  pattern_slug = prompt['pattern_name'].lower().replace(' ', '-')
-  pattern_slug = re.sub(rf'[!]', '', pattern_slug)
-
+  pattern_slug = data.generate_slug(prompt['pattern_name'])
   prompt['pattern_slug'] = pattern_slug
   output_file_name = os.path.join('content', prompt['family'], pattern_slug + '.md')
 
@@ -61,9 +66,12 @@ def generate_pattern(prompt, prefix, suffix, model_name, responses):
 
   image_path = f"static/images/{pattern_slug}.webp"
   if not os.path.exists(image_path):
-    logging.error(f"Image not found for {prompt['pattern_name']}.")
-  else:
-    prompt['image'] = f"images/{pattern_slug}.png"
+    if prompt['image_prompt']:
+      # generate the image
+      generator.generate_image(prompt['image_prompt'], image_path)
+    else:
+      logging.error(f"Image not found for {prompt['pattern_name']} and image_prompt was not set.")
+  prompt['image'] = f"images/{pattern_slug}.png"
 
   # check if the file already exists and if it does, read the status
   file_status = None
@@ -92,40 +100,23 @@ def generate_pattern(prompt, prefix, suffix, model_name, responses):
   # raw_tags = [tag.strip() for tag in raw_tags]
   # prompt['tags'] = prompt['tags'] + "," + ",".join(raw_tags)
 
-  file_template = env.get_template('page-template.md')
-  filecontents = file_template.render(prompt)
-
-  responses.append({'family': prompt['family'], 'model':model_name, 'prompt': full_prompt, 'contents': filecontents})
+  filecontents = generator.render_template_from_file('page-template.md', prompt)
 
   # create the directory if it doesn't exist
   os.makedirs(os.path.dirname(output_file_name), exist_ok=True)
 
   # write the response to a markdown file
   with open(output_file_name, 'w', newline='') as mdfile:
-    # write the markdown response to the file
     mdfile.write(filecontents)
 
-def generate_content(file_name, model_name):
-  # load the yaml file
-  prompts = []
-  with open(file_name, newline='') as yamlfile:
-    prompts = yaml.load(yamlfile, Loader=yaml.FullLoader)
+def generate_content(patterns, prefix, suffix, model_name):
+  for prompt in patterns:
+    generate_pattern(prompt, prefix, suffix, model_name)
 
-  # loop through the prompts and get the responses
-  prefix = "\n".join([prompt['prompt'] for prompt in prompts if prompt['family'] == 'prefix'])
-  suffix = "\n".join([prompt['prompt'] for prompt in prompts if prompt['family'] == 'suffix'])
+generate_content(data.patterns, data.pattern_prefix, data.pattern_suffix, model_name)
+generate_content(data.anti_patterns, data.anti_pattern_prefix, data.anti_pattern_suffix, model_name)
 
-  responses = []
-  for prompt in prompts:
-    if prompt['family'] == 'prefix' or prompt['family'] == 'suffix':
-      continue
-
-    generate_pattern(prompt, prefix, suffix, model_name, responses)
-
-  # write the responses to a json file
-  with open(f"{model_name}-{file_name}.json", 'w', newline='') as jsonfile:
-    # write the json response to the file
-    jsonfile.write(json.dumps(responses))
-
-generate_content('patterns.yaml', model_name)
-generate_content('anti_patterns.yaml', model_name)
+json_data = {'patterns' : data.patterns, 'anti_patterns' : data.anti_patterns}
+with open('./json/data.json', 'w', newline='') as jsonfile:
+  # write the json response to the file
+  jsonfile.write(json.dumps(json_data))

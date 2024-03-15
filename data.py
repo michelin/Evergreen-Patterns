@@ -1,4 +1,10 @@
 import yaml
+import re
+
+def generate_slug(str):
+  slug = str.lower().replace(' ', '-')
+  slug = re.sub(rf'[!]', '', slug)
+  return slug
 
 def load_yaml(file_name):
   
