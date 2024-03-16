@@ -26,15 +26,15 @@ This method is fraught with risks such as unforeseen errors, overwhelming system
 # Possible Mitigations
 
 1. **Gradual Rollout**: Adopt a phased rollout approach to deploy the new system in stages. This method allows for monitoring the impact of the deployment on subsets of users and making adjustments before a full rollout.
-
 2. **Feature Toggling**: Implement a system of feature flags or toggles that allow new features to be enabled or disabled without redeploying the entire system. This enables gradual exposure and testing of new components with real users.
-
 3. **Canary Releases**: Deploy the new version to a small proportion of users or servers first (the "canaries"). Monitor performance and feedback closely before proceeding with a wider rollout. This helps in identifying and mitigating major issues with minimal impact.
-
 4. **Blue/Green Deployment**: Maintain two identical production environments (Blue and Green). Once the new version is ready and tested in the Green environment, simply switch the router to direct all traffic from Blue to Green, minimizing downtime and risk.
-
 5. **Comprehensive Backup and Rollback Plan**: Ensure a robust backup system is in place and a clear, practiced rollback plan is established. If things go wrong, having the ability to revert to the previous version quickly is crucial.
-
 6. **Dry Runs and Staging Environments**: Use staging environments that closely mimic the production environment for final testing and dry runs of the deployment process. This helps in identifying potential issues ahead of the actual deployment.
 
 By acknowledging the pitfalls of Big Bang Deployments and implementing these mitigation strategies, organizations can significantly reduce deployment risks and ensure a smoother transition to new systems or updates.
+
+# Related patterns that can solve this issue
+
+- [Continuous Deployment](../releasing/continuous-deployment.md)
+- [Progressive Roll-out](../releasing/progressive-roll-out.md)
