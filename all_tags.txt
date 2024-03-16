@@ -1,12 +1,13 @@
-integration
 test
+integration
 sre
 day2 
 people
 mindset
 resilience
-architecture
 observability
 automation
 devops
 organization
+finops
+green-it
