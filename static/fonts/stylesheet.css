@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Michelin';
+    src: url('Michelin-SemiBold.eot');
+    src: local('Michelin SemiBold Regular'), local('Michelin-SemiBold'),
+        url('Michelin-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Michelin-SemiBold.woff2') format('woff2'),
+        url('Michelin-SemiBold.woff') format('woff'),
+        url('Michelin-SemiBold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Michelin';
+    src: url('Michelin-Bold.eot');
+    src: local('Michelin Bold'), local('Michelin-Bold'),
+        url('Michelin-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Michelin-Bold.woff2') format('woff2'),
+        url('Michelin-Bold.woff') format('woff'),
+        url('Michelin-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Michelin';
+    src: url('Michelin-Light.eot');
+    src: local('Michelin Light Regular'), local('Michelin-Light'),
+        url('Michelin-Light.eot?#iefix') format('embedded-opentype'),
+        url('Michelin-Light.woff2') format('woff2'),
+        url('Michelin-Light.woff') format('woff'),
+        url('Michelin-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Michelin';
+    src: url('Michelin-Black.eot');
+    src: local('Michelin Black Regular'), local('Michelin-Black'),
+        url('Michelin-Black.eot?#iefix') format('embedded-opentype'),
+        url('Michelin-Black.woff2') format('woff2'),
+        url('Michelin-Black.woff') format('woff'),
+        url('Michelin-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Michelin';
+    src: url('Michelin-Regular.eot');
+    src: local('Michelin Regular'), local('Michelin-Regular'),
+        url('Michelin-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Michelin-Regular.woff2') format('woff2'),
+        url('Michelin-Regular.woff') format('woff'),
+        url('Michelin-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
