@@ -1,28 +1,29 @@
 import os
-import re
-import ollama
 import logging
 import json
-import yaml
 from datetime import datetime
 from openai import OpenAI
 import frontmatter
 import generator
 import data
 
-model_name='llama2:13b'
+
+#model_name='llama2:13b'
 #model_name='qwen:14b'
 #model_name='gemma:7b'
+model_name='llama3'
 
 if 'OPENAI_API_KEY' in os.environ:
   client = OpenAI()
+else:
+  logging.warn("OPENAI_API_KEY environment variable is not set, using Ollama instead.")
 
 def generate_text_openai(full_prompt):
     model_name = 'gpt-4-turbo-preview'
     response = client.chat.completions.create(
         model=model_name,
         messages=[
-            {"role": "system", "content": "You are an expert in IT systems quality of service."},
+            {"role": "system", "content": "You are an IT expert specializing in quality of service and resilience patterns."},
             {"role": "user", "content": full_prompt}
         ]
     )
@@ -42,14 +43,13 @@ def generate_text_openai(full_prompt):
 
     return content, creation_date
 
-def generate_pattern(prompt, prefix, suffix, model_name):
+def generate_pattern(prompt, template_name, action model_name):
 
   # add trailing dot to the short description if it is missing
   if prompt['short_description'][-1] != '.': prompt['short_description'] += '.'
 
-  full_prompt = prefix + "\n" + prompt['prompt'] + "\n" + suffix
-  # replace the pattern_name in the prompt with the actual pattern name
-  full_prompt = generator.render_template_from_string(full_prompt, prompt)
+  full_prompt = generator.render_template_from_file(template_name, prompt)
+  full_prompt += action
 
   pattern_slug = data.generate_slug(prompt['pattern_name'])
   prompt['pattern_slug'] = pattern_slug
@@ -67,8 +67,9 @@ def generate_pattern(prompt, prefix, suffix, model_name):
   image_path = f"static/images/{pattern_slug}.webp"
   if not os.path.exists(image_path):
     if prompt['image_prompt']:
-      # generate the image
-      generator.generate_image_comfy(prompt['image_prompt'], 'text, watermark', image_path)
+      # generate the image FIXME
+      # generator.generate_image_comfy(prompt['image_prompt'], 'text, watermark', image_path)
+      pass
     else:
       logging.error(f"Image not found for {prompt['pattern_name']} and image_prompt was not set.")
   prompt['image'] = f"images/{pattern_slug}.png"
@@ -109,14 +110,36 @@ def generate_pattern(prompt, prefix, suffix, model_name):
   with open(output_file_name, 'w', newline='') as mdfile:
     mdfile.write(filecontents)
 
-def generate_content(patterns, prefix, suffix, model_name):
+def generate_content(patterns, template_name, model_name):
   for prompt in patterns:
-    generate_pattern(prompt, prefix, suffix, model_name)
+    generate_pattern(prompt, template_name, model_name)
 
-generate_content(data.patterns, data.pattern_prefix, data.pattern_suffix, model_name)
-generate_content(data.anti_patterns, data.anti_pattern_prefix, data.anti_pattern_suffix, model_name)
+def generate_mitigations(anti_patterns):
+  # for each anti-pattern, generate the list of patterns that can be used to mitigate it
+  for anti_pattern in anti_patterns:
+    anti_pattern_slug = data.generate_slug(anti_pattern['pattern_name'])
+    anti_pattern['pattern_slug'] = anti_pattern_slug
+    output_file_name = os.path.join('content', anti_pattern['family'], anti_pattern_slug + '-mitigation.md')
 
-json_data = {'patterns' : data.patterns, 'anti_patterns' : data.anti_patterns}
-with open('./json/data.json', 'w', newline='') as jsonfile:
-  # write the json response to the file
-  jsonfile.write(json.dumps(json_data))
+    if os.path.exists(output_file_name):
+      continue
+
+    logging.info(f"Generating content for : {anti_pattern['pattern_name']} to {output_file_name}")
+
+    question = generator.render_template_from_file('context.j2', {"patterns": data.patterns, "anti_patterns": data.anti_patterns})
+    question += f"For the \"{anti_pattern['pattern_name']}\" anti-pattern, select between one and three patterns that can be used to mitigate it and explain why they are suitable."
+    content, created_at = generator.generate_text_ollama(model_name, question)
+    
+    # write the response to a markdown file
+    with open(output_file_name, 'w', newline='') as mdfile:
+      mdfile.write(content)
+
+generate_content(data.patterns, 'prompt-pattern.j2', """
+Please create a complete description in markdown format for this pattern that follows this plan :
+Description, Key principles, Benefits, Implementation strategies and Related online resources.
+                 """, model_name)
+generate_content(data.anti_patterns, 'prompt-anti-pattern.j2', """
+Please create a description in markdown format for this anti-pattern that follows this plan :
+Description, possible mitigations for the problem it causes and Related online resources.                 
+                 """, model_name)
+generate_mitigations(data.anti_patterns)
