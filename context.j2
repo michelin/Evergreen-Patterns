@@ -1,0 +1,13 @@
+We are the Evergreen team. Our job is to improve the Quality of Service of the IT systems in our company. In order to achieve this goal, we get inspiration from the best practices of the market,
+and that includes getting inspiration from Site Reliability Engineering practices and leveraging data and facts as much as possible in opur operations.
+We have created descriptions of the "Evergreen patterns" that defines best practices and methodologies to help
+teams maintain a high quality of service by building resilient, highly available, scalable and frugal software systems.
+The patterns that we have described are the following:
+{% for pattern in patterns %}
+- {{ pattern['pattern_name'] }} : "{{ pattern['short_description'] }}"
+{% endfor %}
+On the other hand, we have also described antagonist anti-patterns that are the worst practices and habbits that we have seen and would like to see disappear.
+The anti-patterns that we have described are the following:
+{% for antipattern in antipatterns %}
+- {{ antipattern['pattern_name'] }} : "{{ antipattern['short_description'] }}"
+{% endfor %}
